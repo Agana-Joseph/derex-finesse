@@ -1722,7 +1722,7 @@ label {
 
 #footer .footer-newsletter form {
   margin-top: 30px;
-  background: #fff;
+  background: var(--text-color);
   padding: 6px 10px;
   position: relative;
   border-radius: 50px;
@@ -1803,7 +1803,7 @@ label {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #47b2e4;
+  color: var(--link-active);
   font-size: 18px;
   line-height: 1;
 }
@@ -1819,7 +1819,7 @@ label {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #777777;
+  color: var(--background-color);
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -1827,14 +1827,14 @@ label {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #47b2e4;
+  color: var(--link-active);
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #47b2e4;
-  color: #fff;
+  background: var(--link-active);
+  color: var(--text-color);
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1846,15 +1846,15 @@ label {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #209dd8;
-  color: #fff;
+  background: var(----hover);
+  color: var(--link-active);
   text-decoration: none;
 }
 
 #footer .footer-bottom {
   padding-top: 30px;
   padding-bottom: 30px;
-  color: #fff;
+  color: var(--white-color);
 }
 
 #footer .copyright {
