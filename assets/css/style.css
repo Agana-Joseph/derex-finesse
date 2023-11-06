@@ -65,9 +65,9 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #37517e;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border: 6px solid #9c18b8;
+  border-top-color: var(--text-color);
+  border-bottom-color: var(--text-color);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1773,6 +1773,10 @@ label {
   text-transform: uppercase;
   font-weight: 600;
   color: var(--background-color);
+}
+#footer .footer-top .footer-contact img{
+  width: 80px;
+  border-radius: 8px;
 }
 
 #footer .footer-top .footer-contact p {
