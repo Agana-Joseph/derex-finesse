@@ -1,0 +1,351 @@
+/* Montserrat Thin */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-Thin.ttf");
+    font-weight: 100;
+}
+
+/* Montserrat Extra Light */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-ExtraLight.ttf");
+    font-weight: 200;
+}
+
+/* Montserrat Light */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-Light.ttf");
+    font-weight: 300;
+}
+
+/* Montserrat Regular */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-Regular.ttf");
+    font-weight: 400;
+}
+
+/* Montserrat Medium */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-Medium.ttf");
+    font-weight: 500;
+}
+
+/* Montserrat Semi-Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-SemiBold.ttf");
+    font-weight: 600;
+}
+
+/* Montserrat Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+}
+
+/* Montserrat Extra Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-ExtraBold.ttf");
+    font-weight: 800;
+}
+
+/* Montserrat Black */
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-Black.ttf");
+    font-weight: 900;
+}
+
+
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../../assets/fonts/SoDoSans-Black.ttf"); 
+		font-weight: 900; 
+	} 
+
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../../assets/fonts/SoDoSans-Bold.ttf"); 
+		font-weight: 700; 
+	} 
+
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../../assets/fonts/SoDoSans-Light.ttf"); 
+		font-weight: 300; 
+	} 
+
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../../assets/fonts/SoDoSans-Regular.ttf"); 
+		font-weight: 400; 
+	} 
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../../assets/fonts/SoDoSans-SemiBold.ttf"); 
+		font-weight: 600; 
+	} 
+
+	@font-face { 
+		font-family: 'SoDoSans'; 
+	    src:url("../../assets/fonts/SoDoSans-Thin.ttf"); 
+		font-weight: 100; 
+	} 
+
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	border: none;
+	font-family: 'SoDoSans',"Helvetica Neue", Helvetica, Arial,sans-serif;
+}
+
+:root{
+	--one: #160120;
+	--two: #9c18b8;
+	--three: #d9d9d9;
+}
+
+
+body{
+	overflow-x: hidden;
+	/* min-height: 100vh */
+	position: relative;
+}
+
+header {
+	width: 100%;
+	background-color: var(--two);
+	height: 250px;
+}
+
+.navbar{
+	display: flex;
+	justify-content: space-between;
+	width: 100vw;
+	height: 90px;
+	padding: 10px 20px;
+	align-items: center;
+	/* border-bottom: 1px solid rgba(0, 0, 0, .1); */
+	background-color: var(--two
+		);
+}
+
+
+.nav-logo{
+	width: 150px;
+	/* height: 120px; */
+}
+.nav-logo img{
+	width: 100%;
+	height: 100%;
+}
+
+.nav-links{
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+.nav-links li {
+	margin-right: 30px;
+	color: #f7f7f7;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
+
+.nav-links li:hover{
+	font-weight: bold;
+}
+
+.contact{
+	background-color: var(--three);
+	padding: 13px 17px;
+	font-weight: bold;
+	border-radius: .1rem;
+	font-size: 1.1rem;
+
+	color:black !important;
+
+}
+
+
+
+/* Nav collapse img */
+.nav-col {
+	display: none;
+	width: 40px;
+	height: 40px;
+	transition: all 2s ease-in-out;
+}
+
+/*  Header */
+.header-content{
+	display: flex;
+	width: 100%;
+	flex-direction:column;
+	align-items: center;
+	gap: 20px;
+	justify-content: center;
+	margin: 20px auto 0 auto;
+	/* background-color: red; */
+}
+
+
+.header-content h1{
+	color: #f2f3f2;
+}
+
+.search-box{
+	display: flex;
+	height: 50px;
+	width: 45%;
+	border-radius: .3rem;
+}
+
+.search-box input{
+	width: 100%;
+	font-size: 1.2rem;
+	padding: 0 10px;
+	border-top-left-radius: .2rem;
+	border-bottom-left-radius: .2rem;
+}
+
+.search-box input:focus{
+	outline: var(--one);
+	border: 1px solid var(--one);
+}
+
+.search-box button{
+	padding: 6px 9px;
+	background-color: var(--one);
+	color: white;
+	font-weight: bold;
+	font-size: .95rem;
+	border-top-right-radius: .2rem;
+	border-bottom-right-radius: .2rem;
+}
+
+
+
+/*  Categories */
+.categories {
+	display: flex;
+	width: 100%;
+	gap: 20px;
+	margin-top: 10px;
+	justify-content: center;
+	list-style: none;
+}
+
+.categories li {
+	text-decoration: none;
+	padding: 9px 15px;	
+	cursor: pointer;
+	background-color: #f2f2f2;
+	color: var(--one);
+	border-radius: .3rem;
+	font-weight: 400;
+}
+
+.categories li:hover {
+	color: black;
+}
+
+.categories li:hover {
+	border: 1px solid var(--one);
+}
+
+
+main {
+	height: 100%;
+	overflow-x: none;
+}
+
+
+.faq-box {
+	list-style: none;
+	margin: 0 auto;
+	padding: 20px 0 ;
+	width: 50%;
+}
+
+
+.faq-box li {	
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+	margin-bottom: 8px;
+	padding: 22px 28px;
+	font-family: 'Montserrat';
+	font-weight: 600;
+	border-radius: .2rem;
+	background-color:  #f4f3f9;
+}
+
+
+/*  Chat Bot Button */
+.chat-bot-btn {
+	width: 50px;
+	height: 40px;
+	background-color:white;
+	position: fixed;
+	border-radius: 1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 20px;
+	right: 10px;
+	/* position: relative; */
+}
+
+.chat-bot-btn span {
+	border-radius: 50%;
+	padding: 1px 8px;
+	color: white;
+	background-color: var(--one);
+	position: absolute; 
+	top: -10px;
+	left: 1px;
+}
+
+.chat-bot-btn img{
+	width: 45px;
+	height: 45px
+}
+
+
+
+
+@media (max-width: 780px) {
+	.header-content h1{
+		font-size: 1.5rem;
+	}
+
+	.nav-links{
+		display: none;
+	}
+
+	.nav-logo {
+		width: 120px;
+	}
+
+	.search-box{
+		width: 60%;
+	}
+
+	.faq-box {
+		width: 70%;
+	}
+}
