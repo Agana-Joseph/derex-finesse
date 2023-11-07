@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+    --app-container: #160120;
+    --background-color: #160120;
+    --bg-color2: #420e58;
+    --white-color: #d9d9d9;
+    --link-active: #9c18b8;
+    --text-color: #d9d9d9;
+    ----hover: #420E5B;
+    }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background-color);
+}
+
+section {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#160120, #9C18B8, #160120);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+section span {
+  position: relative;
+  display: block;
+  width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 2px);
+  background: var(----hover);
+  z-index: 2;
+  transition: 1.5s;
+}
+
+section span:hover {
+  background: var(--link-active);
+  transition: 0s;
+}
+
+section .signin {
+  position: absolute;
+  width: 400px;
+  background: #222;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px var(--background-color);
+}
+
+section .signin .content {
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+section .signin .content h2 {
+  font-size: 2em;
+  color: var(--link-active);
+  text-transform: uppercase;
+}
+
+section .signin .content .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+section .signin .content .form .inputbox {
+  position: relative;
+  width: 100%;
+}
+
+section .signin .content .form .inputbox input {
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1em;
+}
+
+section .signin .content .form .inputbox i {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.signin .content .form .inputbox input:focus ~ i,
+.signin .content .form .inputbox input:valid ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: var(--text-color);
+}
+
+.signin .content .form .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signin .content .form .links a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.signin .content .form .links a:nth-child(2) {
+  color: var(--link-active);
+  font-weight: 600;
+}
+
+.signin .content .form .inputbox input[type="submit"] {
+  padding: 10px;
+  background: var(--link-active);
+  color: var(--background-color);
+  font-weight: 600;
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  section span {
+    width: calc(10vw - 2px);
+    height: calc(10vw - 2px);
+  }
+}
+
+@media (max-width: 600px) {
+  section span {
+    width: calc(20vw - 2px);
+    height: calc(20vw - 2px);
+  }
+}

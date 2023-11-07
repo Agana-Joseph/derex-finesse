@@ -504,6 +504,18 @@ body {
     background-color: var(--background-color);
   }
   
+  .register-section{
+    background: #725378;
+  }
+  
+  .register-section h2{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 32px;
+  }
+  
   .section-title {
     text-align: center;
     padding-bottom: 30px;
@@ -1175,24 +1187,24 @@ body {
 
  
   /*--------------------------------------------------------------
-  # Contact
-  --------------------------------------------------------------*/
-  .contact .info {
-    border-top: 3px solid #47b2e4;
-    border-bottom: 3px solid #47b2e4;
+# Contact
+--------------------------------------------------------------*/
+.contact .info {
+    border-top: 3px solid var(--link-active);
+    border-bottom: 3px solid var(--link-active);
     padding: 30px;
-    background: #fff;
+    background: var(--text-color);
     width: 100%;
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
   }
   
   .contact .info i {
     font-size: 20px;
-    color: #47b2e4;
+    color: var(--link-active);
     float: left;
     width: 44px;
     height: 44px;
-    background: #e7f5fb;
+    background: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1205,14 +1217,14 @@ body {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #37517e;
+    color: var(--background-color);
   }
   
   .contact .info p {
     padding: 0 0 10px 60px;
     margin-bottom: 20px;
     font-size: 14px;
-    color: #6182ba;
+    color: var(----hover);
   }
   
   .contact .info .email p {
@@ -1226,8 +1238,8 @@ body {
   .contact .info .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #333;
-    color: #fff;
+    background: var(--bg-color2);
+    color: var(--text-color);
     line-height: 1;
     padding: 8px 0;
     border-radius: 50%;
@@ -1239,23 +1251,23 @@ body {
   }
   
   .contact .info .social-links a:hover {
-    background: #47b2e4;
-    color: #fff;
+    background: var(--link-active);
+    color: var(--text-color);
   }
   
   .contact .info .email:hover i,
   .contact .info .address:hover i,
   .contact .info .phone:hover i {
-    background: #47b2e4;
-    color: #fff;
+    background: var(--link-active);
+    color: var(--text-color);
   }
   
   .contact .php-email-form {
     width: 100%;
-    border-top: 3px solid #47b2e4;
-    border-bottom: 3px solid #47b2e4;
+    border-top: 3px solid var(--link-active);
+    border-bottom: 3px solid var(--link-active);
     padding: 30px;
-    background: #fff;
+    background: var(--text-color);
     box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
   }
   
@@ -1273,7 +1285,7 @@ body {
   
   .contact .php-email-form .error-message {
     display: none;
-    color: #fff;
+    color: var(--white-color);
     background: #ed3c0d;
     text-align: left;
     padding: 15px;
@@ -1286,7 +1298,7 @@ body {
   
   .contact .php-email-form .sent-message {
     display: none;
-    color: #fff;
+    color: var(--text-color);
     background: #18d26e;
     text-align: center;
     padding: 15px;
@@ -1308,7 +1320,7 @@ body {
     height: 24px;
     margin: 0 10px -6px 0;
     border: 3px solid #18d26e;
-    border-top-color: #eee;
+    border-top-color: var(--white-color);
     animation: animate-loading 1s linear infinite;
   }
   
@@ -1330,7 +1342,7 @@ body {
   
   .contact .php-email-form input:focus,
   .contact .php-email-form textarea:focus {
-    border-color: #47b2e4;
+    border-color: var(--link-active);
   }
   
   .contact .php-email-form input {
@@ -1342,16 +1354,16 @@ body {
   }
   
   .contact .php-email-form button[type=submit] {
-    background: #47b2e4;
+    background: var(--link-active);
     border: 0;
     padding: 12px 34px;
-    color: #fff;
+    color: var(--text-color);
     transition: 0.4s;
     border-radius: 50px;
   }
   
   .contact .php-email-form button[type=submit]:hover {
-    background: #209dd8;
+    background: var(--link-active);
   }
   
   @keyframes animate-loading {
@@ -1369,7 +1381,7 @@ body {
   --------------------------------------------------------------*/
   .breadcrumbs {
     padding: 15px 0;
-    background: #f3f5fa;
+    background: var(--white-color);
     min-height: 40px;
     margin-top: 72px;
   }
@@ -1383,7 +1395,7 @@ body {
   .breadcrumbs h2 {
     font-size: 28px;
     font-weight: 600;
-    color: #37517e;
+    color: var(--bg-color2);
   }
   
   .breadcrumbs ol {
@@ -1402,7 +1414,7 @@ body {
   .breadcrumbs ol li+li::before {
     display: inline-block;
     padding-right: 10px;
-    color: #4668a2;
+    color: var(--bg-color2);
     content: "/";
   }
   
@@ -1411,12 +1423,12 @@ body {
   --------------------------------------------------------------*/
   #footer {
     font-size: 14px;
-    background: #37517e;
+    background: var(--bg-color2);
   }
   
   #footer .footer-newsletter {
     padding: 50px 0;
-    background: #f3f5fa;
+    background: var(--white-color);
     text-align: center;
     font-size: 15px;
     color: #444444;
@@ -1428,12 +1440,12 @@ body {
     padding: 0;
     line-height: 1;
     font-weight: 600;
-    color: #37517e;
+    color: var(--background-color);
   }
   
   #footer .footer-newsletter form {
     margin-top: 30px;
-    background: #fff;
+    background: var(--text-color);
     padding: 6px 10px;
     position: relative;
     border-radius: 50px;
@@ -1456,20 +1468,20 @@ body {
     background: none;
     font-size: 16px;
     padding: 0 20px;
-    background: #47b2e4;
-    color: #fff;
+    background: var(--link-active);
+    color: var(--white-color);
     transition: 0.3s;
     border-radius: 50px;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   }
   
   #footer .footer-newsletter form input[type=submit]:hover {
-    background: #209dd8;
+    background: var(--link-active);
   }
   
   #footer .footer-top {
     padding: 60px 0 30px 0;
-    background: #fff;
+    background: var(--text-color);
   }
   
   #footer .footer-top .footer-contact {
@@ -1483,7 +1495,11 @@ body {
     line-height: 1;
     text-transform: uppercase;
     font-weight: 600;
-    color: #37517e;
+    color: var(--background-color);
+  }
+  #footer .footer-top .footer-contact img{
+    width: 80px;
+    border-radius: 8px;
   }
   
   #footer .footer-top .footer-contact p {
@@ -1491,13 +1507,13 @@ body {
     line-height: 24px;
     margin-bottom: 0;
     font-family: "Jost", sans-serif;
-    color: #5e5e5e;
+    color: var(--background-color);
   }
   
   #footer .footer-top h4 {
     font-size: 16px;
     font-weight: bold;
-    color: #37517e;
+    color: var(--background-color);
     position: relative;
     padding-bottom: 12px;
   }
@@ -1514,7 +1530,7 @@ body {
   
   #footer .footer-top .footer-links ul i {
     padding-right: 2px;
-    color: #47b2e4;
+    color: var(--link-active);
     font-size: 18px;
     line-height: 1;
   }
@@ -1530,7 +1546,7 @@ body {
   }
   
   #footer .footer-top .footer-links ul a {
-    color: #777777;
+    color: var(--background-color);
     transition: 0.3s;
     display: inline-block;
     line-height: 1;
@@ -1538,14 +1554,14 @@ body {
   
   #footer .footer-top .footer-links ul a:hover {
     text-decoration: none;
-    color: #47b2e4;
+    color: var(--link-active);
   }
   
   #footer .footer-top .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #47b2e4;
-    color: #fff;
+    background: var(--link-active);
+    color: var(--text-color);
     line-height: 1;
     padding: 8px 0;
     margin-right: 4px;
@@ -1557,15 +1573,15 @@ body {
   }
   
   #footer .footer-top .social-links a:hover {
-    background: #209dd8;
-    color: #fff;
+    background: var(----hover);
+    color: var(--link-active);
     text-decoration: none;
   }
   
   #footer .footer-bottom {
     padding-top: 30px;
     padding-bottom: 30px;
-    color: #fff;
+    color: var(--white-color);
   }
   
   #footer .copyright {
