@@ -413,6 +413,12 @@ body {
 	background: var(--background-color); /*just to see it*/
 }
 
+@media (max-width: 575px) {
+  .heroAnimat{
+    display: none;
+  }
+}
+
 #hero .container {
   padding-top: 72px;
   z-index: 20;

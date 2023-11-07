@@ -431,6 +431,12 @@ body {
     align-self: center;
     margin-right: 50px;
   }
+
+  @media (max-width: 575px) {
+    .heroAnimat{
+      display: none;
+    }
+  }
   
   #hero .container {
     padding-top: 72px;
