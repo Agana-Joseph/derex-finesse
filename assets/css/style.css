@@ -1120,11 +1120,12 @@ label {
   transition: 0.5s;
   margin: 10px;
   border: 2px solid var(--link-active);
+  background: var(--background-color);
   color: var(--link-active);
 }
 
 .cta .cta-btn:hover {
-  background: var(--background-color);
+  background: rgb(174, 94, 190);
   border: 2px solid var(--white-color);
 }
 
