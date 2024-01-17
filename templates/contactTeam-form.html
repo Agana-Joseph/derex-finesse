@@ -5,18 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 
     <link rel="stylesheet" href="/assets/css/contactTeam.css">
+    <link rel="stylesheet" href="/assets/css/popUp.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <title>Service-Form</title>
+    <title>Contact-team</title>
 </head>
 
 <body>
@@ -32,63 +27,110 @@
 
 
     <!-- ___Form Contenets__ -->
-
-    <div class="formContainer container-fluid">
-        <div class="formDetails col-sm-12 col-md-12 col-lg-6">
-
-            <div class="formTittle">
-                <h2>We're Here To Help</h2>
-                <img src="/assets/img/form-bg1.avif" alt="">
-                <div class="phone">
-                    <a href="https://www.whatsapp.com/channel/0029Va5nrsj96H4XpD02Ou3B"><i
-                            class="fa-solid fa-phone fa-fade"
-                            style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;"> +234 704 028 6614</i></a>
-                    <a href=""><i class="fa-solid fa-phone fa-fade"
-                            style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;"> Derexfinesse@gmail.com</i></a>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="">
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="first_name" required="required">
+                        <span class="text">First Name</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="last_name" required="required">
+                        <span class="text">Last Name</span>
+                        <span class="line"></span>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-sm-12 col-md-12 col-lg-6">
-            <fieldset>
-                <form id="survey-form" class="survey-form">
-                    <label for="name"><input required placeholder="fullname" id="name" name="name"
-                            type="name" /></label>
-                    <input required placeholder="email address" id="email" name="email" type="email" />
-                    <!-- <label id="number" for="number-label">Budget price <span>(optional)</span><br> <input placeholder="enter price" id="number" min="15" max="120" type="number" /></label> -->
-                    <p>What would you like us to do for you?
-                        <select id="dropdown" name="role" required>
-                            <option disabled selected value>Select Service
-                            <option value="neutral">Business Digitization</option>
-                            <option value="neutral">Business Digitalization</option>
-                            <option value="neutral">Business Management</option>
-                            <option value="neutral">Business Globalisation</option>
-                            <option value="neutral">Business Developemnt</option>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="email" required="required">
+                        <span class="text">Email</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="mobile" required="required">
+                        <span class="text">Mobile</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <select class="optWrap" id="serviceSelect" required="required"
+                            onchange="updateSelectedService()">
+                            <option class="opt" value="" disabled selected></option>
+                            <option value="digitalization">Consultation</option>
+                            <option value="digitalization">Business Digitalization</option>
+                            <option value="registration">Business Registration</option>
+                            <option value="digitization">Business Digitization</option>
+                            <option value="globalisation">Business Globalisation</option>
+                            <option value="business-development">Business Development</option>
+                            <option value="cybersecurity">Cybersecurity</option>
+                            <!-- Add more options as needed -->
                         </select>
+                        <span class="text" id="selectedServiceText">Select Service</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
 
-                    <p>What would you like to see improved?
-                        <span class="clue"> (check all that apply)</span>
-                    </p>
-                    <label for="frontend"><input value="front-end projects" id="frontend" type="checkbox" /> Customer
-                        Care Service</label>
-                    <label for="data"><input value="data visualization" id="data" type="checkbox" /> Data
-                        Visualization</label>
-                    <label for="gitter"><input value="gitter help rooms" id="gitter" type="checkbox" /> Business
-                        Management</label>
-                    <label for="data"><input value="city meetups" id="meetups" type="checkbox" /> Marketing
-                        System</label>
-                    <label for="data"><input value="additional courses" id="courses" type="checkbox" /> Additional
-                        Srvices</label>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox textarea">
+                        <textarea name="project_description" required="required"></textarea>
+                        <span class="text">Project description...</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="file" name="file_upload" accept=".doc, .docx, .pdf" required="required">
+                        <span class="text">Upload Document</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
 
-                    <p>Any comments or suggestions?</p>
-                    <textarea id="comments" name="comments" class="input-textarea"
-                        placeholder="Enter your comment here"></textarea>
-                    <br><br>
+            <div class="row100">
+                <div class="col">
+                    <input type="submit" value="submit">
+                </div>
+            </div>
+        </form>
 
-                    <input id="submit" type="submit" value="submit" />
-                </form>
-            </fieldset>
-        </div>
+        <div id="failureMessage" role="alert" style="display: none;">
+            <div class="cd-popup-container">
+                <p>Faild to submit form! Please check your credentials
+                </p>
+                <ul class="cd-buttons">
+                    <li><a href="/templates/signUp/form.html">Try again</a></li>
+                    <li><a href="/templates/index.html">Back home</a></li>
+                </ul>
+            </div>
+        </div> <!-- cd-popup -->
+        <div id="successMessage" role="alert" style="display: none;">
+            <div class="cd-popup-container">
+                <p>You have successfully submit the form!
+                    Our support team will reach out soon.
+                </p>
+                <ul class="cd-buttons">
+                    <li><a href="/templates/signUp/form.html">Try again</a></li>
+                    <li><a href="/templates/index.html">Back home</a></li>
+                </ul>
+            </div>
+        </div> <!-- cd-popup -->
+
     </div>
 
 
@@ -98,9 +140,9 @@
 
     <script src="/assets/js/contactTeam.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>

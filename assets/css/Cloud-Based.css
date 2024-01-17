@@ -7,6 +7,7 @@ body {
     color: var(--app-container);
     background: var(--background-color);
     overflow-x: hidden;
+    width: 100%;
   }
   
   :root {
@@ -239,6 +240,7 @@ body {
     min-width: 200px;
   }
   
+  
   .navbar .dropdown ul a {
     padding: 10px 20px;
     font-size: 14px;
@@ -311,6 +313,11 @@ body {
       display: none;
     }
   }
+  @media (max-width: 414px) {
+    .mobile-nav-toggle {
+      margin-right: 40px;
+    }
+  }
   
   .navbar-mobile {
     position: fixed;
@@ -319,7 +326,7 @@ body {
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(40, 58, 90, 0.9);
+    background: rgba(82, 40, 90, 0.9);
     transition: 0.3s;
     z-index: 999;
   }
@@ -339,7 +346,7 @@ body {
     left: 15px;
     padding: 10px 0;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: var(--text-color);
     overflow-y: auto;
     transition: 0.3s;
   }
@@ -348,7 +355,7 @@ body {
   .navbar-mobile a:focus {
     padding: 10px 20px;
     font-size: 15px;
-    color: #37517e;
+    color: var(--bg-color2);
   }
   
   .navbar-mobile a:hover,
@@ -374,6 +381,11 @@ body {
     background: var(--text-color);
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   }
+  @media (max-width: 920px) {
+    .navbar .dropdown ul a {
+      color: var(--link-active);
+    }
+  }
   
   .navbar-mobile .dropdown ul li {
     min-width: 200px;
@@ -397,6 +409,8 @@ body {
     display: block;
     visibility: visible !important;
   }
+
+
   
   /*--------------------------------------------------------------
   # Hero Section
@@ -420,9 +434,17 @@ body {
     margin-right: 50px;
   }
 
-  @media (max-width: 575px) {
+  @media (max-width: 769px) {
     .heroAnimat{
-      display: none;
+      width: 70vh;
+    }
+  }
+  @media (max-width: 414px) {
+    .heroAnimat{
+      width: 50vh;
+    }
+    #hero::before {
+      width: 58vh;
     }
   }
   
@@ -448,6 +470,21 @@ body {
     line-height: 56px;
     color: var(--background-color);
     z-index: 30;
+  }
+
+  @media (max-width: 905px) {
+    #hero .container h1{
+      font-size: 40px;
+    }
+  }
+  @media (max-width: 505px) {
+    #hero .container h1{
+      font-size: 40px;
+    }
+    #hero .container p {
+      color: var(--text-color);
+      line-height: 36px;
+    }
   }
   
   #hero .btn-get-started {
@@ -510,7 +547,25 @@ body {
     text-align: start;
     padding-bottom: 30px;
     margin-bottom: 30px;
+    width: 700px;
   }
+
+  @media (max-width: 991px) {
+    .section-title {
+        width: 100%;
+    }
+}
+  @media (max-width: 769px) {
+    .section-title {
+        width: 100%;
+    }
+
+}
+  @media (max-width: 414px) {
+    .section-title {
+        width: 100%;
+    }
+}
   
   .section-title h2 {
     font-size: 25px;
@@ -567,6 +622,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .card-block p{
+    width: 90%;
+    color: var(--text-color);
+  }
+  .card-block h4{
+    color: var(--link-active);
+  }
+
+  @media (max-width: 505px) {
+    .cardrow{
+      margin-left: 20px;
+    }
+    .card-block{
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .card-block p{
+      width: 90%;
+    }
   }
 
   .card{
@@ -653,6 +731,28 @@ body {
   /*--------------------------------------------------------------
   # Portfolio
   --------------------------------------------------------------*/
+  .portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+  }
+  @media (max-width: 991px) {
+    .portfolio {
+        margin-left: 20%;
+    }
+}
+  @media (max-width: 769px) {
+    .portfolio {
+        margin-left: 2%;
+    }
+}
+  @media (max-width: 414px) {
+    .portfolio {
+        margin-left: 0;
+    }
+}
+  
   .portfolio #portfolio-flters {
     list-style: none;
     margin-bottom: 20px;
@@ -810,7 +910,18 @@ body {
   .portfolio-details .portfolio-description p {
     padding: 0;
   }
-  
+
+
+  .btn-info{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--text-color);
+    background: var(--link-active);
+  }
+  .btn-info:hover{
+    color: var(--background-color);
+  }
   
   
 
@@ -964,12 +1075,14 @@ body {
 }
 
 .contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  border-radius: 4px;
-}
+  .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 90%;
+    border-style: none;
+  }
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
@@ -1200,7 +1313,7 @@ body {
   border-radius: 50%;
   text-align: center;
   width: 36px;
-  height: 36px;
+  height: 20px;
   transition: 0.3s;
 }
 
@@ -1228,6 +1341,47 @@ body {
 #footer .credits a {
   transition: 0.3s;
 }
+
+ /* Footter responsiveness */
+
+  /* Map */
+  @media (max-width: 992px) {
+    .contact .info iframe {
+      width: 390px;
+    }
+  }
+  @media (max-width: 769px) {
+    .contact .info iframe {
+      width: 370px;
+    }
+  }
+  @media (max-width: 414px) {
+    .contact .info iframe {
+      width: 300px;
+    }
+  } /* Map end */
+
+  @media (max-width: 414px) {
+    #footer .footer-newsletter p {
+        margin-right: 35px;
+    }
+    #footer .footer-newsletter h4 {
+        margin: 0 0 10px 0;
+    }
+
+
+  }
+  @media (max-width: 414px) {
+    #footer .footer-newsletter form{
+      margin-right: 35px;
+    }
+  }
+
+  @media (max-width: 505px) {
+    #footer .footer-top .footer-links p{
+      width: 340px;
+    }
+  }
 
 @media (max-width: 768px) {
   #footer .footer-bottom {

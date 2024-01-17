@@ -7,6 +7,7 @@ body {
     color: var(--app-container);
     background: var(--background-color);
     overflow-x: hidden;
+    width: 100%;
   }
   
   :root {
@@ -238,6 +239,7 @@ body {
     min-width: 200px;
   }
   
+
   .navbar .dropdown ul a {
     padding: 10px 20px;
     font-size: 14px;
@@ -310,6 +312,11 @@ body {
       display: none;
     }
   }
+  @media (max-width: 414px) {
+    .mobile-nav-toggle {
+      margin-right: 40px;
+    }
+  }
   
   .navbar-mobile {
     position: fixed;
@@ -373,6 +380,12 @@ body {
     background: var(--white-color);
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   }
+
+  @media (max-width: 920px) {
+    .navbar .dropdown ul a {
+      color: var(--link-active);
+    }
+  }
   
   .navbar-mobile .dropdown ul li {
     min-width: 200px;
@@ -410,12 +423,21 @@ body {
   z-index: 0;
   position: absolute;
 	align-self: center;
+  align-items: center;
+  justify-content: center;
 	background: var(--background-color); /*just to see it*/
 }
 
-@media (max-width: 575px) {
+@media (max-width: 769px) {
   .heroAnimat{
-    display: none;
+    width: 70vh;
+    height: 40vh;
+    top: 0;
+  }
+}
+@media (max-width: 414px) {
+  .heroAnimat{
+    width: 60vh;
   }
 }
 
@@ -754,6 +776,25 @@ body {
   text-decoration: none;
 }
 
+
+#featurs{
+  background: linear-gradient(rgba(46, 21, 49, 0.674), rgba(49, 24, 53, 0.801)), url(/assets/img/cta-bg2.jpg) fixed center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+@media (max-width: 769px) {
+  #featurs .container .section-title h2{
+    font-size: 25px;
+  }
+}
+@media (max-width: 414px) {
+  #featurs{
+    overflow-x: scroll;
+  }
+}
+
   /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -867,12 +908,17 @@ label {
   color: var(--link-active);
 }
 
-.container .serviComent h2{
+.container .servComent h2{
   margin-top: 70px;
   font-size: 20px;
   color: var(--text-color);
   text-align: center;
   align-items: center;
+}
+@media (max-width: 575px) {
+  .container .servComent h2{
+    margin-right: 12px;
+  }
 }
   
 
@@ -1167,12 +1213,14 @@ label {
 }
 
 .contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  border-radius: 4px;
-}
+  .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 90%;
+    border-style: none;
+  }
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
@@ -1402,7 +1450,7 @@ label {
   border-radius: 50%;
   text-align: center;
   width: 36px;
-  height: 36px;
+  height: 20px;
   transition: 0.3s;
 }
 
@@ -1430,6 +1478,47 @@ label {
 #footer .credits a {
   transition: 0.3s;
 }
+
+  /* Footter responsiveness */
+
+  /* Map */
+  @media (max-width: 992px) {
+    .contact .info iframe {
+      width: 390px;
+    }
+  }
+  @media (max-width: 769px) {
+    .contact .info iframe {
+      width: 370px;
+    }
+  }
+  @media (max-width: 414px) {
+    .contact .info iframe {
+      width: 300px;
+    }
+  } /* Map end */
+
+  @media (max-width: 414px) {
+    #footer .footer-newsletter p {
+        margin-right: 35px;
+    }
+    #footer .footer-newsletter h4 {
+        margin: 0 0 10px 0;
+    }
+
+
+  }
+  @media (max-width: 414px) {
+    #footer .footer-newsletter form{
+      margin-right: 35px;
+    }
+  }
+
+  @media (max-width: 505px) {
+    #footer .footer-top .footer-links p{
+      width: 340px;
+    }
+  }
 
 @media (max-width: 768px) {
   #footer .footer-bottom {

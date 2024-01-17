@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/dashboard/assets/css/servics.css">
+    <link rel="stylesheet" href="/assets/css/logOutmodal.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <div class="app-header">
+            <div class="app-header-left">
+                <span id="app-icon" class="app-icon"></span>
+                <p class="app-name"><a href="/"><img src="/static/img/Derex.png" width="60px" alt=""></a>
+                </p>
+                <div class="search-wrapper">
+                    <input class="search-input" type="text" placeholder="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search"
+                        viewBox="0 0 24 24">
+                        <defs></defs>
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="app-header-right">
+                <button class="mode-switch" title="Switch Theme">
+                    <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
+                        <defs></defs>
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+                </button>
+                <button id="add-btn" class="add-btn" title="Add New Project">
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                    </svg>
+                </button>
+                <link rel="stylesheet" href="/templates/sevices/services.html">
+                <button class="notification-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-bell">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                    </svg>
+                </button>
+                <div class="profile-btn" id="profileBtn">
+                    <img src="/dashboard/assets/image/profile.png">
+                    <!-- <span id="userName">Derex</span> -->
+                    <span id="loggedInUsername"></span>
+                </div>
+            </div>
+
+            <button class="messages-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-message-circle">
+                    <path
+                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+            </button>
+        </div>
+        <div class="app-content">
+            <div class="app-sidebar">
+                <a href="/dashboard/Dashboard/dashboard.html" class="app-sidebar-link active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-home">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                </a>
+                <!-- <a href="" class="app-sidebar-link">
+              <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-pie-chart" viewBox="0 0 24 24">
+                <defs />
+                <path d="M21.21 15.89A10 10 0 118 2.83M22 12A10 10 0 0012 2v10z" />
+              </svg>
+            </a> -->
+                <a href="javascript:void(0)" class="app-sidebar-link">
+                    <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="feather feather-pie-chart" viewBox="0 0 24 24">
+                        <defs />
+                        <path d="M21.21 15.89A10 10 0 118 2.83M22 12A10 10 0 0012 2v10z" />
+                    </svg>
+                </a>
+                <a href="/dashboard/Dashboard/payment.html" class="app-sidebar-link">
+                    <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200">
+                        <path
+                            d="M335.94,574.69c-130.1,0-235.94-105.85-235.94-236S205.84,102.8,335.94,102.8a235.52,235.52,0,0,1,122.6,34.31,20,20,0,1,1-20.86,34.23,195.52,195.52,0,0,0-101.74-28.45c-108,0-195.85,87.86-195.85,195.85S228,534.6,335.94,534.6,531.8,446.74,531.8,338.74a194,194,0,0,0-40.38-119.13,20,20,0,0,1,31.8-24.41,233.78,233.78,0,0,1,48.67,143.54C571.89,468.84,466,574.69,335.94,574.69Z" />
+                        <path
+                            d="M387.6,353.54a48,48,0,0,0-18.17-15.61,239,239,0,0,0-28.87-11.07,228.28,228.28,0,0,1-23.5-8.68,41.16,41.16,0,0,1-14.68-11c-4-4.75-6-11-6-18.55,0-9.58,3.11-17.12,9.24-22.42s14.24-7.9,24.27-7.9c10.91,0,19.71,3,26.15,8.86a38.71,38.71,0,0,1,9.54,13,10.81,10.81,0,0,0,10,6.24h.12a11.08,11.08,0,0,0,9.84-16.23,51.53,51.53,0,0,0-12.74-15.37c-7.08-5.86-16.11-9.61-26.67-11.52V210.64a12,12,0,0,0-23.92,0v31.48a66.7,66.7,0,0,0-22.6,5.62A44.89,44.89,0,0,0,280,264.47a46,46,0,0,0-6.82,25c0,11,2.46,19.87,7.29,26.49A47.59,47.59,0,0,0,298.22,331,242.19,242.19,0,0,0,326.57,342a201.69,201.69,0,0,1,24,8.95,43.81,43.81,0,0,1,15.2,11.64c4.18,5,6.29,11.57,6.29,19.47,0,9.18-3,16.84-8.9,22.75s-14.45,8.9-25.39,8.9c-8.35,0-15.6-1.71-21.53-5.09a37.66,37.66,0,0,1-13.76-13,41.27,41.27,0,0,1-3.69-7.61,11,11,0,0,0-10.36-7.24,11.12,11.12,0,0,0-10,15.84,50.49,50.49,0,0,0,5.19,8.85,57.58,57.58,0,0,0,22.54,18.13,68.6,68.6,0,0,0,16.18,5.12,11.59,11.59,0,0,0-.22,2.14v31.2a12,12,0,0,0,23.92,0v-31.2c0-.34-.08-.65-.1-1,9.27-.76,17.38-2.93,24.07-6.62,8.4-4.63,14.73-10.7,18.82-18a48.56,48.56,0,0,0,6.19-24C395,369.74,392.53,360.42,387.6,353.54Z" />
+                        <path
+                            d="M864.06,1097.2c-130.11,0-235.95-105.84-235.95-235.94s105.84-236,235.95-236a235.52,235.52,0,0,1,122.59,34.32,20,20,0,0,1-20.86,34.23A195.43,195.43,0,0,0,864.06,665.4c-108,0-195.86,87.86-195.86,195.86s87.86,195.85,195.86,195.85,195.85-87.86,195.85-195.85a194,194,0,0,0-40.38-119.13,20,20,0,1,1,31.8-24.41A233.78,233.78,0,0,1,1100,861.26C1100,991.36,994.16,1097.2,864.06,1097.2Z" />
+                        <path
+                            d="M918.15,874.35A48.91,48.91,0,0,0,890.24,858,43.76,43.76,0,0,0,915,843.67q9.64-11.11,9.65-29.1,0-21.68-14.54-34.12t-42.21-12.4v-32.5a12,12,0,1,0-23.91,0V768h-29.6a15.1,15.1,0,0,0-15.1,15.1V939.39a15.1,15.1,0,0,0,15.1,15.1h29.73a10.88,10.88,0,0,0-.13,1.28V987a12,12,0,0,0,23.91,0v-31.2a10.88,10.88,0,0,0-.13-1.28h.81q29.36,0,44.83-13.75t15.48-36.5A44.9,44.9,0,0,0,918.15,874.35Zm-94.83-86.49h39.15q19,0,28.3,8.2T900,818.54q0,14.82-9.39,23t-27.11,8.2H823.32Zm70.23,137.8q-10.45,8.73-29.49,8.73H823.32V867.74h40.21q19,0,29.75,8.86T904,901.06Q904,916.93,893.55,925.66Z" />
+                        <path
+                            d="M1058,620.05a20,20,0,0,1-20-20A437.6,437.6,0,0,0,600,162a20,20,0,1,1,0-40.09A477.7,477.7,0,0,1,1078.07,600,20.05,20.05,0,0,1,1058,620.05Z" />
+                        <path
+                            d="M600,1078.07A477.7,477.7,0,0,1,121.93,600,20,20,0,1,1,162,600a437.6,437.6,0,0,0,438,438,20,20,0,0,1,0,40.09Z" />
+                    </svg>
+                </a>
+                <a href="javascript:void(0)" class="app-sidebar-link">
+                    <svg class="link-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="feather feather-settings" viewBox="0 0 24 24">
+                        <defs />
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+                    </svg>
+                    <a href="/templates/sevices/services.html" class="app-sidebar-link">
+                        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                    </a>
+                    <a href="/templates/sevices/development.html" class="app-sidebar-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                            <path
+                                d="M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z" />
+                        </svg>
+                    </a>
+            </div>
+
+            <div class="projects-section">
+                <div class="projects-section-header">
+                    <p>Services</p>
+                    <p class="time">December, 29</p>
+                </div>
+
+                <main class="page-content">
+                    <div class="card">
+                        <div class="content">
+                            <h2 class="title">Consultation</h2>
+                            <p class="copy">Proceed to get consultation service</p>
+                            <button id="consultant" class="btn">Get service</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content">
+                            <h2 class="title">Business Registration</h2>
+                            <p class="copy">Proceed to register your business</p>
+                            <button id="register" class="btn">Get Servic</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content">
+                            <h2 class="title">Business Development</h2>
+                            <p class="copy">Proceed to business development service</p>
+                            <button id="develop" class="btn">Get Service</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="content">
+                            <h2 class="title">Digitalization</h2>
+                            <p class="copy">Proceed to digitalization service</p>
+                            <button id="digitalization" class="btn">Get Service</button>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Log out modal -->
+            <div id="logOut" role="alert" style="display: none;">
+                <div class=" cd-popup-container">
+                    <p>Are you sure you want to log out?</p>
+                    <ul class="cd-buttons">
+                        <li><a id="logout-btn" href="">Log Out</a></li>
+                        <li><a href="/index.html">Back home</a></li>
+                    </ul>
+                </div>
+            </div> <!-- cd-popup -->
+        </div>
+    </div>
+
+
+
+
+    <script src="/assets/js/dashboard.js"></script>
+    <script src="/dashboard/assets/js/service.js"></script>
+
+    <!-- registration -->
+    <script src="/assets/js/signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="/assets/js/userRegister.js"></script>
+
+    <script>
+        const userData = JSON.parse(localStorage.getItem("userData"));
+        const loggedInUsername = document.getElementById("loggedInUsername");
+        loggedInUsername.textContent = `Welcome, ${userData.username}!`;
+    </script>
+</body>
+
+</html>

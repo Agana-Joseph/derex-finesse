@@ -1,0 +1,91 @@
+
+:root {
+    --one: #160120;
+    --two: #9c18b8;
+    --three: #d9d9d9;
+    }
+
+    main{
+      background: #270637;
+    }
+
+.panel {
+    width: 80%;
+    margin: 2em auto;
+    background: var(--one);
+    box-shadow: 0px 0px 30px rgba(247, 2, 255, 0.25);
+    padding: 20px;
+  }
+.panel .panel-heading h3{
+    margin-top: 30px;
+    color: var(--three);
+  }
+.panel .panel-heading h5{
+    margin-top: 30px;
+    color: var(--three);
+  }
+  
+  .panel-body {
+    width: 90%;
+    margin: 2em auto;
+    color: var(--three);
+  }
+
+  .panel .card-body{
+    margin-top: 10px;
+    color: var(--three);
+  }
+  
+  body {
+    font-size: 15px;
+  }
+  
+  .form-group input{
+    background: #270637;
+    color: var(--three);
+    border: 1px solid #d2d2d2;
+  }
+  .form-group input:focus{
+    color: var(--one);
+    background: var(--two);
+  }
+
+  label {
+    font-weight: 400;
+    color: var(--three);
+  }
+  
+  .helper-text {
+    color: #E91E63; 
+    font-size: 12px;
+    margin-top: 5px;
+    height: 12px;
+    display: block;
+  }
+  
+  .helper-text-green {
+    color: var(--two);
+  }
+
+  #submit-button{
+    background: var(--two);
+    color: var(--three);
+  }
+  #submit-button a{
+    text-decoration: none;
+    color: var(--three);
+  }
+  #submit-button a:hover{
+    color: var(--two);
+  }
+  
+  
+  /* Hosted Payment Fields styles*/
+  .hosted-field-focus { 
+    outline: none;
+    background-image: linear-gradient(#9c18b8, #9c18b8), linear-gradient(#d2d2d2, #d2d2d2);
+    animation: input-highlight 0.5s forwards;
+    box-shadow: none;
+    background-size: 0 2px, 100% 1px;
+  }
+  

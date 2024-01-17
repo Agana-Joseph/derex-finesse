@@ -6,6 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Derex Finess</title>
+  <meta name="ahrefs-site-verification" content="7903dca7f34b406185e33b88f1ea95a416d4b17170d861a934061834c032a3d8">
+  <meta name="google-site-verification" content="EZ5JqZdOX6FF10AuTKjpYR4zrE03-rB0jr7cHAJoKsY">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -33,6 +35,9 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Chatbot -->
+  <link rel="stylesheet" href="/assets/css/chatbot.css">
 </head>
 
 <body>
@@ -48,14 +53,14 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="/templates/about.html">About</a></li>
+          <li><a class="nav-link scrollto" href="/templates/about.html">About Us</a></li>
           <li><a class="nav-link   scrollto" href="/templates/blog/blog.html">Blog</a></li>
-          <li><a class="nav-link scrollto" href="/templates/sevices/services.html">Services</a></li>
-          <li class="dropdown"><a href="/templates/sevices/services.html"><span>Solution</span> <i
+          <li class="dropdown"><a href="/templates/sevices/services.html"><span>Services</span> <i
                 class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/templates/sevices/registration.html">Business Registration</a></li>
-              <li class="dropdown"><a href="/templates/sevices/digitization.html"><span>Business Digitization</span> <i
+              <li><a href="/templates/sevices/consultant.html">Consultation</a></li>
+              <li class="dropdown"><a href="/templates/sevices/digitization.html"><span>Digitization</span> <i
                     class="bi bi-chevron-right"></i></a>
                 <!-- <ul>
                           <li><a href="#">Business Development</a></li>
@@ -65,13 +70,17 @@
                           <li><a href="#">Business </a></li>
                       </ul> -->
               </li>
-              <li><a href="#">Business Digitalization</a></li>
-              <li><a href="#">Business Globalization</a></li>
-              <li><a href="#">Business Development</a></li>
+              <li><a href="/templates/sevices/digitalization.html">Digitalization</a></li>
+              <li><a href="/templates/sevices/globalization.html">Business Globalization</a></li>
+              <li><a href="/templates/sevices/development.html">Business Development</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="/templates/support.html">Support</a></li>
-          <li><a class="getstarted scrollto" href="/templates/signUp/form.html">Get Started</a></li>
+          <li><a class="nav-link scrollto" href="./templates/support.html">Support</a></li>
+          <li id="signup-btn userName"><a class="getstarted scrollto" href="/templates/signUp/form.html">Get Started</a>
+          </li>
+          <li id="login-btn"><a class="getstarted scrollto" href="/templates/signUp/login.html">Login</a></li>
+          <!-- <li id="loggedInUsername" class="userName"><a class="getstarted scrollto"
+              href="/dashboard/Dashboard/dashboard.html"></a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -86,10 +95,10 @@
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
           data-aos="fade-up" data-aos-delay="200">
           <h1>Revolutionize your business with our cutting edge technology</h1>
-          <h2>stay ahead of the curve and future proof your business with our expertise in harnessing emerging
+          <h2>Stay ahead of the curve and future proof your business with our expertise in harnessing emerging
             technologies to digitally transorm your businesses.</h2>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="/templates/signUp/form.html" class="btn-get-started scrollto">Get Started</a>
             <a href="https://youtu.be/ACny7slqmkA?si=6xG6_TVukbEetEdY" class="glightbox btn-watch-video"><i
                 class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
@@ -122,6 +131,34 @@
     <canvas class="heroAnimat" width='2000' height='550'></canvas>
 
   </section><!-- End Hero -->
+
+
+  <!-- CHATBOT -->
+  <div class="container">
+    <div class="chatbox">
+      <div class="chatbox__support">
+        <div class="chatbox__header">
+          <div class="chatbox__image--header">
+            <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+          </div>
+          <div class="chatbox__content--header">
+            <h4 class="chatbox__heading--header">Derex Finesse</h4>
+            <p class="chatbox__description--header">Hi. How can we help you?</p>
+          </div>
+        </div>
+        <div class="chatbox__messages">
+          <div></div>
+        </div>
+        <div class="chatbox__footer">
+          <input id="input" type="text" placeholder="Write a message...">
+          <button class="chatbox__send--footer send__button">Send</button>
+        </div>
+      </div>
+      <div class="chatbox__button">
+        <button><img src="/assets/img/about/chatbox-icon.svg" /></button>
+      </div>
+    </div>
+  </div>
 
   <main id="main">
 
@@ -187,8 +224,8 @@
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
             data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><i class="fa-solid fa-money-check-dollar fa-beat"
-                  style="--fa-animation-duration: 2s"></i></div>
+              <div class="icon"><i class="fa-solid fa-hands-helping fa-beat" style="--fa-animation-duration: 2s"></i>
+              </div>
               <h4><a href="javascript:void(0)">End-to-End
                   Support</a></h4>
               <p>From the initial consultation to implementation and ongoing support, we're here for you at every step
@@ -200,7 +237,8 @@
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
             data-aos-delay="300">
             <div class="icon-box">
-              <div class="icon"><i class="fa-solid fa-hands-helping fa-beat" style="--fa-animation-duration: 2s"></i>
+              <div class="icon"><i class="fa-solid fa-money-check-dollar fa-beat"
+                  style="--fa-animation-duration: 2s"></i>
               </div>
               <h4><a href="javascript:void(0)">Cost
                   Effective</a></h4>
@@ -326,7 +364,7 @@
               </div>
 
               <div class="progress">
-                <span class="skill">motgat finance <i class="val">90%</i></span>
+                <span class="skill">Mortgage finance <i class="val">90%</i></span>
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
                   </div>
@@ -371,33 +409,49 @@
         <div class="row">
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-chart-line fa-fade"
+                  style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;"></i></div>
+              <h4><a href="templates/sevices/consultant.html">Consultation</a></h4>
+              <ul class="list">
+                <li class="first">Strategic Planning</li>
+                <li>Establishment Planning</li>
+                <li>Documentary Guidance </li>
+                <li>Live Agent Support</li>
+              </ul>
+              <a href="/templates/sevices/consultant.html" class="button button1">Learn More</a>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
               <div class="icon"><i class="fa-solid fa-building fa-fade"
                   style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;"></i></div>
               <h4><a href="/templates/sevices/registration.html">Business Registration</a></h4>
               <!-- <h2 class="text2">&dollar;119.99</h2> -->
               <ul class="list">
-                <li class="first">Online Filing</li>
+                <li class="first">Registration </li>
                 <li>Legal Compliance</li>
-                <li>Document Verification</li>
-                <li>Customer Support</li>
+                <li>Tax handling </li>
+                <li>Business Documentation</li>
               </ul>
-              <a href="#" class="button button1">Add to cart</a>
+              <a href="/templates/sevices/registration.html" class="button button1">Learn more</a>
             </div>
           </div>
 
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
             data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><i class="fa-solid fa-cogs fa-fade"
-                  style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;"></i></div>
-              <h4><a href="/templates/sevices/digitization.html">Business Digitization</a></h4>
+              <div class="icon">
+                <i class="fa-solid fa-cogs fa-fade" style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;"></i>
+                </i>
+              </div>
+              <h4><a href="/templates/sevices/digitization.html">Digitization</a></h4>
               <ul class="list">
                 <li class="first">Workflow Automation</li>
-                <li>Data Security</li>
-                <li>Advanced Data Analytics</li>
-                <li>Scalable Business Platforms</li>
+                <li>Online filling</li>
+                <li>Document conversation </li>
+                <li>Cloud adoption</li>
               </ul>
-              <a href="#" class="button button1">Add to cart</a>
+              <a href="/templates/sevices/digitization.html" class="button button1">Learn more</a>
             </div>
           </div>
 
@@ -406,33 +460,18 @@
             <div class="icon-box">
               <div class="icon"><i class="fa-solid fa-sitemap fa-fade"
                   style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;"></i></div>
-              <h4><a href="/templates/sevices/digitalization.html">Business Digitalization</a></h4>
+              <h4><a href="/templates/sevices/digitalization.html">Digitalization</a></h4>
               <ul class="list">
-                <li class="first">Global Reach</li>
-                <li>Cloud Adoption</li>
-                <li>Workflow Automation</li>
-                <li>Customer Engagement
-                </li>
+                <li class="first">Digital incorporation </li>
+                <li>Lead sourcing</li>
+                <li>Workflow automation</li>
+                <li>Social media presence</li>
               </ul>
-              <a href="#" class="button button1">Add to cart</a>
+              <a href="/templates/sevices/digitalization.html" class="button button1">Learn more</a>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-            data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="fa-solid fa-globe-americas fa-fade"
-                  style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;"></i></div>
-              <h4><a href="/templates/sevices/globalization.html">Business Globalisation</a></h4>
-              <ul class="list">
-                <li class="first">Global Reach</li>
-                <li>Cross-Border Trade</li>
-                <li>International Partnerships</li>
-                <li>Diversified Markets</li>
-              </ul>
-              <a href="#" class="button button1">Add to cart</a>
-            </div>
-          </div>
+
 
         </div>
         <div class="serviceCard row">
@@ -447,11 +486,28 @@
                 <li>Market Growth </li>
                 <li>Competitive Analysis</li>
               </ul>
-              <a href="#" class="button button1">Add to cart</a>
+              <a href="/templates/sevices/development.html" class="button button1">Learn more</a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
+            data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="fa-solid fa-globe-americas fa-fade"
+                  style="--fa-animation-duration: 2s; --fa-fade-opacity: 0.6;"></i></div>
+              <h4><a href="/templates/sevices/globalization.html">Business Globalisation</a></h4>
+              <ul class="list">
+                <li class="first">Global reach</li>
+                <li>International partnership</li>
+                <li>Cross border trade</li>
+                <li>Web3 integration</li>
+              </ul>
+              <a href="/templates/sevices/globalization.html" class="button button1">Learn more</a>
             </div>
           </div>
 
         </div>
+
 
         <div class="serviComent">
           <h2>Partner with us for financial solutions that truly make a difference in your journey toward success.</h2>
@@ -471,7 +527,7 @@
               here is a general overview of the typical steps involved in working with Derex Finesse:</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Learn More</a>
+            <a class="cta-btn align-middle" href="/templates/about.html">Learn More</a>
           </div>
         </div>
 
@@ -499,79 +555,93 @@
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/cloud1.png" class="img-fluid" alt=""></div>
+            <div class="portfolio-img" id="portfolioCloud1"><img src="assets/img/portfolio/cloud1.png" class="img-fluid"
+                alt=""></div>
             <div class="portfolio-info">
               <h4>Cloud-Based Solutions</h4>
               <p>Cloud</p>
               <a href="assets/img/portfolio/cloud1.png" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="/templates/blog/Cloud-Based.html" class="details-link" title="More Details"><i
+                  class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/security2.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img" id="portfolioSecurity2"><img src="assets/img/portfolio/security2.jpg"
+                class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Safeguarding Your Digital Assets</h4>
               <p>Security</p>
               <a href="assets/img/portfolio/security2.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="/templates/blog/security.html" class="details-link" title="More Details"><i
+                  class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/cloud2.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img" id="portfolioCloud2"><img src="assets/img/portfolio/cloud2.jpg" class="img-fluid"
+                alt=""></div>
             <div class="portfolio-info">
               <h4>Migrating to the Cloud</h4>
               <p>Cloud</p>
               <a href="assets/img/portfolio/cloud2.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="/templates/blog/migratingTocloud.html" class="details-link" title="More Details"><i
+                  class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/Automation1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img" id="portfolioAutomat1"><img src="assets/img/portfolio/Automation1.jpg"
+                class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>The Power of Automation</h4>
               <p>Automation</p>
               <a href="assets/img/portfolio/Automation1.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="/templates/blog/PowerofAutomation.html" class="details-link" title="More Details"><i
+                  class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/security1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img" id="portfolioScurity1"><img src="assets/img/portfolio/security1.jpg"
+                class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Cybersecurity Excellence</h4>
               <p>Security</p>
               <a href="assets/img/portfolio/security1.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="/templates/blog/cyberExellence.html" class="details-link" title="More Details"><i
+                  class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/cloud3.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img" id="portfolioCloud3"><img src="assets/img/portfolio/cloud3.jpg" class="img-fluid"
+                alt=""></div>
             <div class="portfolio-info">
               <h4>Comparing Cloud Providers</h4>
               <p>Cloud</p>
               <a href="assets/img/portfolio/cloud3.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="/templates/blog/cloudProvider.html" class="details-link" title="More Details"><i
+                  class="bx bx-link"></i></a>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/Automation2.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-img" id="portfolioAutomat2"><img src="assets/img/portfolio/Automation2.jpg"
+                class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>Automated Document Management</h4>
               <p>Automation</p>
               <a href="assets/img/portfolio/Automation2.jpg" data-gallery="portfolioGallery"
                 class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="/templates/blog/automatedDocument.html" class="details-link" title="More Details"><i
+                  class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -761,7 +831,12 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Adress:</h4>
+                <h4>Adress1:</h4>
+                <p>6381 greenscape dr hilliard, Ohio U.S.A</p>
+              </div>
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Adress2:</h4>
                 <p>456/457 ikwerre Road rumokwuta port Harcourt</p>
               </div>
 
@@ -778,8 +853,9 @@
               </div>
 
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15902.35341308276!2d6.982637471257971!3d4.840521803501357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069ce13b648e9d9%3A0x76dccdefc56dc372!2sRumuokwuta%20500272%2C%20Port%20Harcourt%2C%20Rivers!5e0!3m2!1sen!2sng!4v1699278752377!5m2!1sen!2sng"
-                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.176045175236!2d-83.18392182540917!3d40.004515080627364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883896c0ce7e9975%3A0xd7dfa95224db739a!2s6381%20Greenscape%20Drive%2C%20Hilliard%2C%20OH%2043026%2C%20USA!5e0!3m2!1sen!2sng!4v1699896246770!5m2!1sen!2sng"
+                width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
           </div>
@@ -844,7 +920,7 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <img src="/assets/img/Derex_logo.jpg" alt="">
             <p>
-              456/457 ikwerre Road rumokwuta port Harcourt<br><br>
+              - 6381 greenscape dr hilliard, Ohio U.S.A<br> - 456/457 ikwerre Road rumokwuta port Harcourt <br>
               <strong>Phone:</strong> +234 7040286614<br>
               <strong>Email:</strong> derexfinesse@gmail.com<br>
             </p>
@@ -886,7 +962,8 @@
               <a href="https://web.facebook.com/profile.php?id=61550024897090" class="facebook"><i
                   class="bx bxl-facebook"></i></a>
               <a href="https://www.instagram.com/derex_finesse/" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://whatsapp.com/channel/0029Va5nrsj96H4XpD02Ou3B" class="google-plus"><i
+                  class="fab fa-whatsapp"></i></a>
               <a href="https://www.linkedin.com/in/derex-finesse-939002292/" class="linkedin"><i
                   class="bx bxl-linkedin"></i></a>
             </div>
@@ -898,7 +975,7 @@
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">
-        &copy; Copyright <strong><span>ArsDerex finesse</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Derex finesse</span></strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -920,9 +997,25 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/js/signup.js"></script>
+
+  <script src="/assets/js/userRegister.js"></script>
+
+
 
   <!-- Template Main JS File -->
+  <script src="/assets/js/index.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    const userData = JSON.parse(localStorage.getItem("userData"));
+    const loggedInUsername = document.getElementById("loggedInUsername");
+    loggedInUsername.textContent = `${userData.username}!`;
+
+    // Hide the element with id 'userName'
+    const loginBtn = document.getElementById("login-btn");
+    loginBtn.style.display = "none";
+  </script>
 
 </body>
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/assets/css/confirmCode.css">
+	<title>modal</title>
+</head>
+
+<body>
+	<!-- <a href="#0" class="cd-popup-trigger">View Pop-up</a> -->
+	<div class="signUpModal">
+
+		<div role="alert">
+			<div class="cd-popup-container">
+				<p>Enter the code sent to your email address for verification</p>
+				<form id="verification-form" action="">
+					<input id="verification-code" name="verification-code" type="password" required />
+					<i>Enter Code</i>
+					<div id="passwordError" class="error"></div>
+					<div id="successMessage" style="display: none;">Redirecting...</div>
+					<div id="failureMessage" style="display: none;">Code error please request another code if this keeps
+						happening!</div>
+					<div class="inputbox">
+						<button class="signup-btn">submit</button>
+					</div>
+				</form>
+				<ul class="cd-buttons">
+					<li><a href="/templates/signUp/form.html">Try again</a></li>
+					<li><a href="/templates/index.html">Back home</a></li>
+				</ul>
+				<a href="#0" class="cd-popup-close img-replace">Close</a>
+			</div> <!-- cd-popup-container -->
+		</div> <!-- cd-popup -->
+	</div>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="/assets/js/userRegister.js"></script>
+	<script src="/assets/js/confirmPass.js"></script>
+</body>
+
+</html>

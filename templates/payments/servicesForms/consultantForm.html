@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css">
+    <!-- local CSS -->
+    <link rel="stylesheet" href="/assets/css/serviceForm.css">
+    <link rel="stylesheet" href="/assets/css/popUp.css">
+    <title>digitization</title>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="row content">
+            <div class="col-lg-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">You’re almost done!.</h3>
+                        <h5>Payment info:</h5>
+                        <!-- <h5>Price: <strong>$1340</strong></h5> -->
+                    </div>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-sm-4"> Service:</dt>
+                            <dd class="col-sm-8">Development</dd>
+                            <dt class="col-sm-4">Price:</dt>
+                            <dd class="col-sm-8">$1438 USD</dd>
+                            <dt class="col-sm-4">Chages:</dt>
+                            <dd class="col-sm-8">$3 USD</dd>
+                            <dt class="col-sm-4">Total:</dt>
+                            <dd class="col-sm-8">$1441 USD</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Input your business info below.</h3>
+                        <h5>Selected Service: <strong> Consultation</strong></h5>
+                        <!-- <h5>Price: <strong>$1340</strong></h5> -->
+                    </div>
+                    <form class="panel-body" id="checkout-form" action="#">
+                        <div class="row">
+                            <div class="form-group col-xs-6">
+                                <label for="cardholder-name">Business Name</label>
+                                <input type="text" class="form-control" id="business-name">
+                                <span class="helper-text"></span>
+                            </div>
+                            <div class="form-group col-xs-6">
+                                <label for="cardholder-name">Email</label>
+                                <input type="text" class="form-control" id="email">
+                                <span class="helper-text"></span>
+                            </div>
+                            <div class="form-group col-xs-6">
+                                <label for="phone-number">Contact Phone Number</label>
+                                <input type="text" class="form-control" id="phone-number">
+                                <span class="helper-text" id="ccn-help"></span>
+                            </div>
+                            <div class="form-group col-xs-6">
+                                <label for="phone-number">Country Region</label>
+                                <input type="text" class="form-control" id="phone-number">
+                                <span class="helper-text" id="ccn-help"></span>
+                            </div>
+                            <div class="form-group col-xs-6">
+                                <label for="exp-date">Company Type</label>
+                                <input type="text" class="form-control" id="conpany-type">
+                                <!-- <div class="form-control" id="exp-date" data-bluesnap="exp"></div> -->
+                                <span class="helper-text" id="exp-help"></span>
+                            </div>
+                            <div class="form-group col-xs-6">
+                                <label for="cardholder-name">Entity Ending</label>
+                                <input type="text" class="form-control" id="entity-end">
+                                <span class="helper-text"></span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-lg col-md-4" type="button" id="submit-button"
+                            onclick="submitForm()">Next</button>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="failureMessage" role="alert" style="display: none;">
+            <div class="cd-popup-container">
+                <p>Unable to submit form! kindly check your credentials
+                </p>
+                <ul class="cd-buttons">
+                    <li><a href="/templates/payments/servicesForms/developmentForm.html">Try again</a></li>
+                    <li><a href="/">Back home</a></li>
+                </ul>
+            </div>
+        </div> <!-- cd-popup -->
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css"></script>
+        <!--BlueSnap Hosted Payment Fields JavaScript file-->
+        <script type="text/javascript" src="https://sandpay.bluesnap.com/web-sdk/5/bluesnap.js"></script>
+
+        <script src="/assets/js/serviceForm.js"></script>
+        <script src="/assets/js/developmentForm.js"></script>
+    </main>
+
+
+</body>
+
+</html>

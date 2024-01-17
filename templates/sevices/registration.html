@@ -32,6 +32,9 @@
 
     <!-- Template Main CSS File -->
     <link href="/assets/css/registration.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/popUp.css">
+    <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="/assets/css/chatbot.css">
 </head>
 
 <body>
@@ -48,13 +51,13 @@
                     <li><a class="nav-link scrollto active" href="/index.html">Home</a></li>
                     <li><a class="nav-link scrollto" href="/templates/about.html">About</a></li>
                     <li><a class="nav-link   scrollto" href="/templates/blog/blog.html">Blog</a></li>
-                    <li><a class="nav-link scrollto" href="/templates/sevices/services.html">Services</a></li>
-                    <li class="dropdown"><a href="/templates/sevices/services.html"><span>Solution</span> <i
+                    <li><a class="nav-link scrollto" href="/templates/support.html">Support</a></li>
+                    <li class="dropdown"><a href="/templates/sevices/services.html"><span>Solutions</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#">Business Development</a></li>
-                            <li class="dropdown"><a href="#"><span>Business Digitization</span> <i
-                                        class="bi bi-chevron-right"></i></a>
+                            <li><a href="/templates/sevices/development.html">Business Development</a></li>
+                            <li class="dropdown"><a href="/templates/sevices/digitization.html"><span>Business
+                                        Digitization</span> <i class="bi bi-chevron-right"></i></a>
                                 <!-- <ul>
                                     <li><a href="#">Business Development</a></li>
                                     <li><a href="#">Business Digitization</a></li>
@@ -63,8 +66,9 @@
                                     <li><a href="#">Business </a></li>
                                 </ul> -->
                             </li>
-                            <li><a href="#">Business Digitalization</a></li>
-                            <li><a href="#">Business Globalization</a></li>
+                            <li><a href="/templates/sevices/digitalization.html">Business Digitalization</a></li>
+                            <li><a href="/templates/sevices/globalization.html">Business Globalization</a></li>
+                            <li><a href="/templates/sevices/consultant.html">Business Consultation</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -81,9 +85,13 @@
         <div class="container">
             <div class="row justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up"
                 data-aos-delay="200">
-                <h1>Register Your Business in On</h1>
+                <h1>Register Your Business in One Click</h1>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
                     <!-- <img src="assets/img/hero-img.png" class="img-fluid animated" alt=""> -->
+                </div>
+                <div class="HeadContents">
+                    <p id="msg"></p>
+                    <!-- <p id="text" style="display: none;">Register your business <strong>anywhere in the world in one click</strong></p> -->
                 </div>
             </div>
 
@@ -91,8 +99,118 @@
 
     </section><!-- End Hero -->
 
+    <!-- Chatbot -->
+
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
+                            alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Derex Finesse</h4>
+                        <p class="chatbox__description--header">Hi. How can we help you?</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input id="input" type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="/assets/img/about/chatbox-icon.svg" /></button>
+            </div>
+        </div>
+    </div>
+
+
     <!--Main layout-->
     <main id="main">
+
+        <section id="featurs">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Key Features of Our Registration Service</h2>
+                </div>
+
+                <div class="row content">
+                    <div class="col-lg-6">
+                        <p>
+
+                            In the relentless pace of today's business world, streamlined and compliant registration is
+                            not just a choice; it's essential. Derex Finesse elevates businesses by simplifying
+                            processes, ensuring legal compliance, and offering robust support for seamless
+                            establishment, providing a competitive edge in the dynamic market landscape.
+                        </p>
+                        <ul>
+                            <li><i class="ri-check-double-line"></i> <strong>Swift Registration:</strong>
+                                Effortless business registration for a quick start, eliminating bureaucratic hassles and
+                                saving valuable time.
+                            </li>
+                            <li><i class="ri-check-double-line"></i> <strong>Legal Compliance:</strong>
+                                Stay legally sound with automated compliance checks, ensuring your business adheres to
+                                all necessary regulations seamlessly.</li>
+                            <li><i class="ri-check-double-line"></i> <strong>Tax Handling Simplicity:</strong>
+                                Simplify tax matters with expert guidance, managing tax-related tasks efficiently and
+                                ensuring compliance with changing regulations.</li>
+                            <li><i class="ri-check-double-line"></i> <strong>Live Business Agent Support:</strong>
+                                Live support from dedicated agents, providing real-time assistance throughout the
+                                registration process for a smooth and personalized experience.</li>
+                            <li><i class="ri-check-double-line"></i> <strong>Customized Business Documentation:</strong>
+                                Generate customized business documentation, including articles of incorporation,
+                                partnership agreements, and other legal documents, tailored to meet the specific needs
+                                and structures of different businesses.</li>
+                            <li><i class="ri-check-double-line"></i> <strong>Efficient Business Establishment:</strong>
+                                Expert assistance in establishing your business, guiding you through every step for a
+                                successful and hassle-free business setup.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <ul>
+                            <li><i class="ri-check-double-line"></i> <strong>Business Name Availability Checks:</strong>
+                                Implement automated systems to monitor and ensure ongoing compliance with changing
+                                regulations, providing real-time updates and alerts to help businesses stay on top of
+                                legal requirements.
+                            </li>
+                            <li><i class="ri-check-double-line"></i> <strong>Electronic Document Submission:</strong>
+                                Enable electronic document submission to relevant authorities, allowing businesses to
+                                submit required documentation digitally and receive prompt acknowledgment and
+                                confirmation.</li>
+                            <li><i class="ri-check-double-line"></i> <strong>Tax Planning and Advisory
+                                    Services:</strong>
+                                Offer tax planning and advisory services to assist businesses in optimizing their tax
+                                structures, maximizing deductions, and ensuring compliance with tax laws to minimize
+                                financial risks.</li>
+                            <li><i class="ri-check-double-line"></i> <strong>Legal Support for Business Structure
+                                    Selection:</strong>
+                                Provide legal support to help businesses choose the most suitable legal structure (e.g.,
+                                LLC, corporation, partnership) based on their goals, ensuring alignment with legal
+                                requirements and business objectives.</li>
+                            <li><i class="ri-check-double-line"></i> <strong>Certification and Accreditation
+                                    Services:</strong>
+                                Provide certification and accreditation services to businesses, ensuring they meet
+                                industry-specific standards and requirements, enhancing credibility and market
+                                acceptance.</li>
+                            <li><i class="ri-check-double-line"></i> <strong>Business Registration Workshops:</strong>
+                                Conduct business registration workshops or webinars to educate entrepreneurs about the
+                                registration process, legal obligations, and best practices for setting up a successful
+                                business.</li>
+                        </ul>
+                        <a href="#register" class="btn-learn-more">Get Service</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
         <!-- ======= Frequently Asked Questions Section ======= -->
         <section id="faq" class="faq section-bg">
             <div class="container" data-aos="fade-up">
@@ -170,12 +288,12 @@
 
 
         <!--___Registration Form__-->
-        <section class="register-section">
+        <section id="register" class="register-section">
             <h2 class="section__title section__title-gradient">Get Started</h2>
             <div class="formContainer">
                 <div class="search-wrapper">
                     <input type="text" id="country-inp" placeholder="Enter a country name here..." />
-                    <button id="search-btn">Search</button>
+                    <button id="search-btn">Select Country</button>
                 </div>
                 <div id="suggestions" class="suggestions"></div>
 
@@ -187,44 +305,54 @@
 
                         <div id="companyDropdown">
                             <label for="states">Company type:</label>
-                            <select id="states" name="states">
-                                <option value="option1">C-corpration</option>
-                                <option value="option2">CCL</option>
+                            <select id="companytype" name="states">
+                                <option value="C-corpration">C-corpration</option>
+                                <option value="S Corporation">S Corporation</option>
+                                <option value="Cooperative">Cooperative</option>
+                                <option value="CCL">CCL</option>
+                                <option value="LLC">LLC</option>
+                                <option value="Nonprofit Organization">Nonprofit Organization</option>
+                                <option value="Social Enterprise">Social Enterprise</option>
+                                <option value="Professional Corporation (PC)">Professional Corporation (PC)</option>
+                                <option value="Partnership">Partnership</option>
+                                <option value="Corporation">Corporation</option>
+                                <option value="LLP">LLP</option>
+                                <option value="Sole Proprietorship">Sole Proprietorship</option>
                             </select>
                         </div>
 
-                        <label for="name">Business Name:</label>
-                        <input type="text" id="name" name="name" required /><br />
+                        <label for="company">Business Name:</label>
+                        <input type="text" id="businessname" name="company" required /><br />
 
                         <div class="entityDropdown">
                             <label for="dog-names">Entity ending:</label>
-                            <select name="dog-names" id="dog-names">
-                                <option value="rigatoni">Co.</option>
-                                <option value="dave">Incorporated</option>
-                                <option value="pumpernickel">Inc.</option>
-                                <option value="reeses">Corp</option>
-                                <option value="reeses">Corporation</option>
-                                <option value="reeses">Limitted</option>
-                                <option value="reeses">LTD</option>
+                            <select name="dog-names" id="entity">
+                                <option value="Co.">Co.</option>
+                                <option value="Incorporated">Incorporated</option>
+                                <option value="Inc.">Inc.</option>
+                                <option value="Corp">Corp</option>
+                                <option value="Corporation">Corporation</option>
+                                <option value="Limitted">Limitted</option>
+                                <option value="LTD">LTD</option>
                             </select>
                         </div>
 
                         <div class="industryDropdown">
                             <label for="dog-names">Company Industry:</label>
                             <select name="industry" id="industry">
-                                <option value="industry">B2B Software</option>
-                                <option value="industry">B2C Software</option>
-                                <option value="industry">Consultant/Contractor</option>
-                                <option value="industry">E-commerce</option>
-                                <option value="entity">Education</option>
-                                <option value="company">Finincial services</option>
-                                <option value="industry">Healthcare</option>
-                                <option value="industry">Hospitality</option>
-                                <option value="industry">Legal Services</option>
-                                <option value="industry">Marketing services</option>
-                                <option value="industry">Market Place</option>
+                                <option value="B2B Software">B2B Software</option>
+                                <option value="B2C Software">B2C Software</option>
+                                <option value="Consultant/Contractor">Consultant/Contractor</option>
+                                <option value="E-commerce">E-commerce</option>
+                                <option value="Education">Education</option>
+                                <option value="Finincial services">Finincial services</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Hospitality">Hospitality</option>
+                                <option value="Legal Services">Legal Services</option>
+                                <option value="Marketing services">Marketing services</option>
+                                <option value="Market Place">Market Place</option>
+                                <option value="Travel">Travel</option>
                                 <option value="other">Other</option>
-                                <option value="industry">Travel</option>
                             </select>
                             <input type="text" id="otherIndustry" name="otherIndustry" style="display: none;"
                                 placeholder="Specify industry">
@@ -234,14 +362,27 @@
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required /><br />
 
-                        <label for="name">State:</label>
-                        <input type="text" id="name" name="name" required /><br />
+                        <label for="state">State:</label>
+                        <select id="state" name="state" required></select><br />
+                        <input type="text" id="stateInput" name="state" required readonly /><br />
+                        <br />
 
                         <label for="country">Country:</label>
                         <input type="text" id="selected-country" name="country" readonly /><br />
 
                         <button type="submit">Register</button>
                     </form>
+
+                    <div id="faildMsg" role="alert" style="display: none;">
+                        <div class="cd-popup-container">
+                            <p>Uh! Form Error! please check your credentials</p>
+                            <ul class="cd-buttons">
+                                <li><a href="#registration-form">Try again</a></li>
+                                <li><a href="/templates/index.html">Back home</a></li>
+                            </ul>
+                            <a href="#0" class="cd-popup-close img-replace">Close</a>
+                        </div> <!-- cd-popup-container -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -252,11 +393,9 @@
 
                 <div class="section-title">
                     <h2>Contact</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint
-                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-                        Quia fugiat sit
-                        in iste officiis commodi quidem hic quas.</p>
+                    <p>Ready to take the next step in your business journey? We're here to listen, assist, and guide
+                        you. At Derex Finesse, your goals become our mission. Connect with us today, and let's explore
+                        how we can help you thrive in the digital world.</p>
                 </div>
 
                 <div class="row">
@@ -265,7 +404,12 @@
                         <div class="info">
                             <div class="address">
                                 <i class="bi bi-geo-alt"></i>
-                                <h4>Adress:</h4>
+                                <h4>Adress1:</h4>
+                                <p>6381 greenscape dr hilliard, Ohio U.S.A</p>
+                            </div>
+                            <div class="address">
+                                <i class="bi bi-geo-alt"></i>
+                                <h4>Adress2:</h4>
                                 <p>456/457 ikwerre Road rumokwuta port Harcourt</p>
                             </div>
 
@@ -282,8 +426,9 @@
                             </div>
 
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15902.35341308276!2d6.982637471257971!3d4.840521803501357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069ce13b648e9d9%3A0x76dccdefc56dc372!2sRumuokwuta%20500272%2C%20Port%20Harcourt%2C%20Rivers!5e0!3m2!1sen!2sng!4v1699278752377!5m2!1sen!2sng"
-                                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.176045175236!2d-83.18392182540917!3d40.004515080627364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883896c0ce7e9975%3A0xd7dfa95224db739a!2s6381%20Greenscape%20Drive%2C%20Hilliard%2C%20OH%2043026%2C%20USA!5e0!3m2!1sen!2sng!4v1699896246770!5m2!1sen!2sng"
+                                width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 
                     </div>
@@ -348,7 +493,8 @@
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <img src="/assets/img/Derex_logo.jpg" alt="">
                         <p>
-                            456/457 ikwerre Road rumokwuta port Harcourt<br><br>
+                            6381 greenscape dr hilliard, Ohio U.S.A
+                            <br>
                             <strong>Phone:</strong> +234 7040286614<br>
                             <strong>Email:</strong> derexfinesse@gmail.com<br>
                         </p>
@@ -369,11 +515,16 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Our Services</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Business Registration</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Business Digitization</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Business Digitalization</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Business Globalisation</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Business Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="/templates/sevices/consultant.html">Business Consultation</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="/templates/sevices/digitization.html">Business Digitization</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="/templates/sevices/digitization.html">Business Digitalization</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="/templates/sevices/globalization.html">Business Globalisation</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a
+                                    href="/templates/sevices/development.html">Business Development</a></li>
                         </ul>
                     </div>
 
@@ -401,7 +552,7 @@
 
         <div class="container footer-bottom clearfix">
             <div class="copyright">
-                &copy; Copyright <strong><span>ArsDerex finesse</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>Derex finesse</span></strong>. All Rights Reserved
             </div>
         </div>
     </footer><!-- End Footer -->
@@ -420,6 +571,7 @@
     <!-- Template Main JS File -->
     <script src="/assets/js/register.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/chatBot.js"></script>
 
 </body>
 

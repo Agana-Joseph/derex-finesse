@@ -1,0 +1,105 @@
+:root {
+    --background-color: #160120;
+    --bg-color2: #420e58;
+    --white-color: #d9d9d9;
+    --link-active: #9c18b8;
+    --text-color: #d9d9d9;
+    ----hover: #420E5B;
+    }
+
+.bg-color{
+    background: var(--background-color);
+}
+
+.background{
+
+}
+
+.bg-color2{
+    background: var(--bg-color2);
+}
+
+.container-fluid .info-box{
+    background: var(--link-active);
+}
+
+.bg-txt{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.txt-color{
+    color: var(--text-color);
+}
+
+.link-active{
+    background: var(--link-active);
+}
+
+.link-color{
+    color: var(--link-active);
+}
+
+.main-header{
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.mt-2 ul li:hover{
+    color: var(--link-active);
+}
+.mt-2 ul li a:hover{
+    color: var(--link-active);
+}
+.mt-2 ul .nav-item .nav-link:hover{
+    color: var(--text-color);
+    background: var(----hover);
+}
+.mt-2 ul .nav-item .nav-link:active{
+    color: var(--text-color);
+    background: var(--link-active);
+}
+
+.row .col-md-12 .card{
+    background: var(--bg-color2);
+}
+.row .col-md-8 .card{
+    background: var(--bg-color2);
+}
+
+.card-body .products-list .item{
+    background: var(--bg-color2);
+}
+
+.col-md-4 .card .view{
+    background: var(--bg-color2);
+}
+
+/* side bar search */
+.form-inline .input-group input{
+    background: var(--background-color);
+}
+.form-inline .input-group .input-group-append button{
+    background: var(--background-color);
+}
+
+/* table */
+.col-12 .card-body table T-head{
+    background: #420e58;
+}
+
+/* recent request */
+.link-hover:hover{
+    color: var(--text-color);
+}
+
+
+
+/* Chat box */
+.card-body .direct-chat-messages .direct-chat-msg .direct-chat-text{
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.card{
+    color: var(--text-color);
+}

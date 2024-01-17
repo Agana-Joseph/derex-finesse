@@ -110,67 +110,77 @@ function animate() {
 
 animate();
 
-// ___FORM__
+// For selecteted services
+// Function to update selected service text
+function updateSelectedService() {
+  var selectedServiceText = document.querySelector("#selectedServiceText");
+  var serviceSelect = document.querySelector("#serviceSelect");
+  selectedServiceText.innerText =
+    serviceSelect.options[serviceSelect.selectedIndex].text;
+  console.log("Selected Service:", selectedServiceText.innerText);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("survey-form");
-  console.log(form);
+  // Function to submit the form
+  function submitForm() {
+    const firstName = document.querySelector('input[name="first_name"]').value;
+    const lastName = document.querySelector('input[name="last_name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const mobile = document.querySelector('input[name="mobile"]').value;
+    const selectedService = document.querySelector("#serviceSelect").value;
+    const projectDescription = document.querySelector(
+      'textarea[name="project_description"]'
+    ).value;
+    const fileInput = document.querySelector('input[name="file_upload"]');
+    const failureMessage = document.getElementById("failureMessage");
+    const successMessage = document.getElementById("successMessage");
 
-  form.addEventListener("submit", function (e) {
-    console.log(e);
-    e.preventDefault();
+    const formData = new FormData();
+    formData.append("firstname", firstName);
+    formData.append("lastname", lastName);
+    formData.append("email", email);
+    formData.append("mobile", mobile);
+    formData.append("service", selectedService);
+    formData.append("description", projectDescription);
+    formData.append("file", fileInput.files[0]);
+    console.log("For active");
 
-    // Get form data
-    const formData = new FormData(form);
-
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const services = formData.get("role");
-    const recommend = formData.get("decision");
-    const experience = formData.get("role2");
-
-    // values of the checkboxes individually
-    const customerCareService = formData.get("frontend");
-    const dataVisualization = formData.get("data");
-    const businessManagement = formData.get("gitter");
-    const marketingSystem = formData.get("meetups");
-    const additionalServices = formData.get("courses");
-
-    const comment = formData.get("comments");
-
-    console.log(formData);
-
-    // Collected form data
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Selected Service:", services);
-    console.log("Recommend:", recommend);
-    console.log("Favorite Experience:", experience);
-    console.log("Improvement - Customer Care Service:", customerCareService);
-    console.log("Improvement - Data Visualization:", dataVisualization);
-    console.log("Improvement - Business Management:", businessManagement);
-    console.log("Improvement - Marketing System:", marketingSystem);
-    console.log("Improvement - Additional Services:", additionalServices);
-    console.log("Comments:", comment);
-
-    fetch("https://ebube-authapi-kj6m.onrender.com/api/users/service", {
+    fetch("https://derex.onrender.com/contacts", {
       method: "POST",
       body: formData,
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        if (data.status === "success") {
-          console.log("Login successful!");
-          alert("Thanks for your response we'll get back to you shortly.");
-          window.location.href = "/about.html";
+        // console.log("Response:", data);
+        if (data.message === "Contact created successfully") {
+          successMessage.style.display = "block";
+          document.querySelector("form").reset();
+          console.log("Form submitted successfully");
         } else {
-          alert("Form submission failed. Please try again.");
+          failureMessage.style.display = "block";
+          console.log("Unable to  submite form");
         }
-      })
-      .catch((error) => {
-        // Error message
-        console.error("Form submission error:", error);
-        alert("Form submission failed. Please try again.");
       });
+    // .catch((error) => {
+    //   console.error("Error:", error);
+    //   error
+    //     .text()
+    //     .then((errorMessage) =>
+    //       console.error("Error Message:", errorMessage)
+    //     );
+    // });
+  }
+
+  // Attach event listener to form submit
+  document.querySelector("form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    submitForm();
   });
+
+  // Attach event listener to service select change
+  document
+    .querySelector("#serviceSelect")
+    .addEventListener("change", function () {
+      updateSelectedService();
+    });
 });

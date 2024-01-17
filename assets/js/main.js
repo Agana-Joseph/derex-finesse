@@ -1,10 +1,3 @@
-/**
- * Template Name: Arsha
- * Updated: Sep 18 2023 with Bootstrap v5.3.2
- * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
 (function () {
   "use strict";
 
@@ -298,7 +291,7 @@
   }
 
   /**
-   * Porfolio isotope and filter
+   * Blog isotope and filter
    */
   window.addEventListener("load", () => {
     let portfolioContainer = select(".portfolio-container");
@@ -332,14 +325,14 @@
   });
 
   /**
-   * Initiate portfolio lightbox
+   * Initiate Blog lightbox
    */
   const portfolioLightbox = GLightbox({
     selector: ".portfolio-lightbox",
   });
 
   /**
-   * Portfolio details slider
+   * Blog details slider
    */
   new Swiper(".portfolio-details-slider", {
     speed: 400,

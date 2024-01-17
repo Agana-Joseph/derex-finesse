@@ -1,14 +1,22 @@
-body,
-html {
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display-swap');
+* {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #160120;
-  color: #9C18B8;
-  font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-sarif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0c0011;
+}
+:root{
+	--one: #160120;
+	--two: #9c18b8;
+	--three: #d9d9d9;
 }
 
 canvas {
@@ -18,7 +26,7 @@ canvas {
   left: 0;
   top: 0;
   width: 100%;
-  height: 30rem;
+  height: 40rem;
   z-index: 0;
 }
 
@@ -42,219 +50,160 @@ canvas {
 
 /* ___Form Contenets__ */
 
-  
-
-.formContainer{
-  display: flex;
-  justify-content: space-around;
+.container {
+  width: 80%;
+  padding: 20px;
 }
 
-  label{
-    display:block;
-    margin:0.5rem 0;
-    width:100%;
-    margin-top: 10px;
-  }
+.container h2 {
+  width: 100%;
+  color: var(--two);
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
 
-  
-  input[type="submit"]{
-    display: block;
-    width: 100%;
-    padding: 0.7rem;
-    background: #d9d9d9;
-    color: #160120;
-    border-radius: 2px #160120;
-    text-align: center;
-    cursor: pointer;
-    
-  }
-  #comments{
-    
-    height: 70px;;
-    width:100%;
-  }
-  
-  form {
-    width: 30vw;
-    max-width: 500px;
-    min-width: 300px;
-    margin: 0 auto;
-  }
-  
-  fieldset{
-    border:solid ;
-    background-color: #62076a;
-    opacity: 0.8;
-    width: 80%;;
-    margin-left: 4rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    border:1px ;
-    place-content: flex;
-    border-radius: 7px;
-    display: block;
-  }
-  
-  #dropdown{
-    width:100%;
-    border-radius: 7px;
-  }
-  #dropdown2{
-    width:100%;
-    border-radius: 7px;
-  }
-  
-  #name, #email, #number{
-    width:100%;
-    height:30px;
-    border-radius:7px;
-    margin-top: 10px;
-    
-  }
-  
-  #name-label{
-    margin-top: 30px;
-   
-  }
+.container .row100 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
 
-  .survey-form{
-    color: #d9d9d9;
-  }
+.container .row100 .col {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  transition: 0.5s;
+}
 
+.container .row100 .inputBox {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: var(--two);
+}
+.container .row100 .inputBox select {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 40px;
+  color: var(--two);
+  background-color: var(--one);
+  border: 1px solid var(--two);
+  padding: 0 10px;
+}
 
-  .formTittle{
-    width: 100%;
-    position: relative;
-    
-  }
-
-  .formTittle h2{
-    position: absolute;
-    color: #d9d9d9;
-    font-size: 40px;
-    font-weight: lighter;
-    margin-left: 8rem;
-  }
-
-  .formTittle img{
-    margin-top: 80px;
-    width: 100%;
-    height: 600px;
-    border-radius: 50px;
-  }
-
-  .formTittle i{
-    font-size: 20px;
-    color: #d9d9d9;
-    margin-left: 27px;
-    margin-top: 27px;
-    /* font-family: belleza; */
-  }
-
-
-  @media screen and (max-width: 900px) {
-
-    fieldset{
-      width: 70%;;
-      margin-left: 7rem;
-      margin-top: 3rem;
-      margin-bottom: 2rem;
-      border:1px ;
-      place-content: center start;
-      
-  }
-    /* #name,
-    #email,
-    #dropdown,
-    #comments,
-    #submit {
-      max-width: 90%;
-    } */
-
-  }
-
-  @media screen and (max-width: 769px) {
-
-    #name,
-    #email,
-    #dropdown,
-    #comments,
-    #submit {
-      max-width: 90%;
-    }
-
-    .formContainer{
-      display: flex;
-      align-items: center;
-      text-align: center;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .formTittle h2{
-      margin-top: 20px;
-      margin-left: 0;
-      width: 100%;
-    }
-    .formTittle img{
-      margin-top: 80px;
-      width: 70%;
-      height: 500px;
-      border-radius: 50px;
-    }
-
-    fieldset{
-      width: 70%;;
-      margin-left: 7rem;
-      margin-top: 3rem;
-      margin-bottom: 2rem;
-      border:1px ;
-      place-content: center start;
-      
-  }
-
-  form {
-    width: 50vw;
-    max-width: 500px;
-    min-width: 300px;
-    margin: 0 auto;
-  }
-  }
+.container .row100 .inputBox select:hover {
+  color: var(--three);
+  background: var(--one);
+  cursor: pointer;
+}
 
 
 
-  @media screen and (max-width: 414px) {
 
-    .formTittle h2{
-      font-size: 30px;
-      margin-left: 0;
-      width: 100%;
-    }
 
-    .formTittle img{
-      margin-top: 60px;
-      width: 70%;
-      height: 300px;
-      border-radius: 50px;
-    }
-    fieldset{
-      width: 70%;;
-      margin-left: 4rem;
-      margin-top: 3rem;
-      margin-bottom: 2rem;
-  }
+.container .row100 .inputBox input,
+.container .row100 .inputBox.textarea textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: var(--one);
+}
 
-  form {
-    width: 20vw;
-    max-width: 500px;
-    min-width: 300px;
-    margin: 0 auto;
-  }
-  #name,
-  #email,
-  #dropdown,
-  #comments,
-  #submit {
-    max-width: 90%;
-  }
-  }
+.container .row100 .inputBox .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--two);
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line {
+  height: 100%;
+}
+
+.container .row100 .inputBox.textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.container .row100 .inputBox.textarea textarea {
+  height: 100%;
+  resize: none;
+}
+
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line {
+  height: 100%;
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 7px 35px;
+  cursor: pointer;
+  outline: none;
+  background: var(--two);
+  color: var(--one);
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+/* dropdown */
+
+.container select {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: var(--one);
+}
+
+.container select:focus {
+  border-color: var(--two);
+}

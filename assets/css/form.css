@@ -23,6 +23,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: var(--background-color);
+  overflow: hidden;
 }
 
 section {
@@ -35,6 +36,7 @@ section {
   gap: 2px;
   flex-wrap: wrap;
   overflow: hidden;
+  overflow-y: hidden;
 }
 
 section::before {
@@ -158,14 +160,22 @@ section .signin .content .form .inputbox i {
   font-weight: 600;
 }
 
-.signin .content .form .inputbox input[type="submit"] {
+.signin .content .form .inputbox .signup-btn{
   padding: 10px;
   background: var(--link-active);
   color: var(--background-color);
   font-weight: 600;
+  width: 100%;
+  border: none;
   font-size: 1.25em;
   letter-spacing: 0.05em;
   cursor: pointer;
+}
+
+.error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 @media (max-width: 900px) {
@@ -181,3 +191,12 @@ section .signin .content .form .inputbox i {
     height: calc(20vw - 2px);
   }
 }
+
+#successMessage,
+#emailExist,
+#failureMessage{
+  color: var(--text-color);
+  font-size: 35px;
+}
+
+

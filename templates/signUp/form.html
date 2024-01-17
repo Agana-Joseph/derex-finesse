@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/assets/css/form.css" />
+  <link rel="stylesheet" href="/assets/css/popUp.css">
   <title>sign up form</title>
 </head>
 
@@ -273,32 +274,65 @@
     <span></span>
 
     <div class="signin">
+
       <div class="content">
         <h2>Sign Up</h2>
-        <div class="form">
+
+        <form id="signup-form" class="form" action="/users/register/" method="POST" onsubmit="return">
           <div class="inputbox">
-            <input for="name" type="text" required />
+            <input id="name" name="name" type="text" required oninput="validateName()" />
             <i>Username</i>
+            <div id="nameError" class="error"></div>
           </div>
+
           <div class="inputbox">
-            <input for="password" type="password" required />
-            <i>Retype Password</i>
+            <input id="email" name="email" type="text" required oninput="validateEmail()" />
+            <i>Email</i>
+            <div id="emailError" class="error"></div>
           </div>
+
           <div class="inputbox">
-            <input type="password" required />
+            <input id="password" name="password" type="password" required oninput="validatePassword()" />
             <i>Password</i>
+            <div id="passwordError" class="error"></div>
           </div>
-          <div class="links">
-            <a href="#">Forgot Password</a>
-            <a href="#">Login</a>
-          </div>
+
           <div class="inputbox">
-            <input type="submit" value="Sign Up" />
+            <input id="retypePassword" type="password" name="retypePassword" required
+              oninput="validateRetypePassword()" />
+            <i>Retype Password</i>
+            <div id="retypePasswordError" class="error"></div>
           </div>
-        </div>
+
+          <div class="links">
+            <a href="./forgotPassword.html">Forgot Password</a>
+            <a href="./login.html">Login</a>
+          </div>
+
+          <div class="inputbox">
+            <button class="signup-btn">Sign Up</button>
+          </div>
+
+        </form>
+        <div id="successMessage" style="display: none;">Redirecting...</div>
+        <div id="faildMsg" role="alert" style="display: none;">
+          <div class="cd-popup-container">
+            <p>Uh! Sign Up faild! please check your credentials</p>
+            <ul class="cd-buttons">
+              <li><a href="/templates/signUp/form.html">Try again</a></li>
+              <li><a href="/index.html">Back home</a></li>
+            </ul>
+            <a href="#0" class="cd-popup-close img-replace">Close</a>
+          </div> <!-- cd-popup-container -->
+        </div> <!-- cd-popup -->
+        <div id="failureMessage" style="display: none;">Signup failed please check your credentials!</div>
+
       </div>
     </div>
   </section>
+
+  <script src="/assets/js/signup.js"></script>
+  <script src="/assets/js/userRegister.js"></script>
 </body>
 
 </html>

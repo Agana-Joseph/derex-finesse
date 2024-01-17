@@ -211,6 +211,7 @@ header {
 	height: 50px;
 	width: 45%;
 	border-radius: .3rem;
+	/* margin-bottom: 20px; */
 }
 
 .search-box input{
@@ -292,6 +293,18 @@ main {
 	font-weight: 600;
 	border-radius: .2rem;
 	background-color:  #f4f3f9;
+	flex-direction: column;
+}
+
+.faq-box li span{
+	position: absolute;
+	color: var(--two);
+	margin-left: 35rem;
+}
+
+.faq-box .collapse p{
+	color: var(--one);
+	font-size: 13px;
 }
 
 
@@ -320,21 +333,60 @@ main {
 	left: 1px;
 }
 
+/* Bot Icon */
 .chat-bot-btn img{
 	width: 45px;
 	height: 45px
 }
 
 
+/* Faq */
+.faqs {
+  margin-top: 16px;
+}
 
 
+details {
+	margin-bottom: 8px;
+	
+}
+
+summary {
+	font-weight: bold;
+	cursor: pointer;
+	background-color:  #f4f3f9;
+	padding: 8px;
+	border-radius: 4px;
+	padding: 22px 10px;
+	font-family: 'Montserrat';
+	font-weight: 600;
+}
+
+/* Move the icon to the right */
+
+
+.text {
+  margin-top: 8px;
+  padding: 0 10px;
+}
+
+
+
+
+
+/* --- Media Queries --- */
 @media (max-width: 780px) {
 	.header-content h1{
 		font-size: 1.5rem;
 	}
 
-	.nav-links{
+	.nav-links li:nth-child(2),.nav-links li:last-child{
 		display: none;
+	}
+
+	.nav-links li{
+		color: var(--one) !important;
+		font-weight: 700;
 	}
 
 	.nav-logo {

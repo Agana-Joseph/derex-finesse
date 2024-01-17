@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/support.css">
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="/assets/css/support.css">
+    <!-- chatbot -->
+    <link rel="stylesheet" href="/assets/css/chatbot.css">
     <link rel="icon" href="/assets/img/Derex_logo.jpg" type="image/gif" />
 </head>
 
@@ -14,73 +23,199 @@
         <!-- Navigation -->
         <nav class="navbar">
             <div class="nav-logo">
-                <img src="/assets/img/Derex_LogoWeb.png">
+                <a href="../index.html"><img src="../assets/img/Derex_LogoWeb.png"></a>
             </div>
 
             <ul class="nav-links">
-                <li>Home</li>
-                <li>Support</li>
-                <li class="contact">Contact Us</li>
+                <li id="home">Home</li>
+                <li id="service">Service</li>
+                <li id="blog">Blog</li>
+                <li id="Contact" class="contact">Contact Us</li>
             </ul>
 
-            <img class="nav-col" src="./assets/nav-menu (3).svg">
+            <img class="nav-col" src="../assets/nav-menu (3).svg">
         </nav>
 
         <div class="header-content">
             <h1>How can we help you !</h1>
             <div class="search-box">
-                <input type="text" name="">
-                <button>Search</button>
+                <input type="text" name="search" id="searchInput" oninput="handleSearch()">
+                <button onclick="clearSearch()">Clear</button>
             </div>
-
         </div>
 
     </header>
 
     <!--  Floating ChatBot Button -->
-    <div class="chat-bot-btn">
-        <span>1</span>
-        <img src="/assets/img/chatbox-icon.svg">
+    <!-- Chatbot -->
+
+    <div class="container">
+        <div class="chatbox" data-aos="fade-up" data-aos-delay="200">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
+                            alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Derex Finesse</h4>
+                        <p class="chatbox__description--header">Hi. How can we help you?</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input id="input" type="text" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="../assets/img/about/chatbox-icon.svg" /></button>
+            </div>
+        </div>
     </div>
 
     <!-- Body 2-->
     <main>
 
-        <ul class="categories">
-            <li>Product</li>
-            <li>Service</li>
-            <li>Onboarding</li>
-            <li>Ask Question</li>
-        </ul>
+        <!-- Faq  -->
+        <ol class="faq-box" id="faqList">
+            <div>
+                <details onclick="toggleCollapse('faq1')">
+                    <summary>What services does Derex Finesse offer?</summary>
+                    <p class="text" id="faq1">
+                        Derex Finesse offers a wide range of services, including digitalization, business development,
+                        cybersecurity, and more. Our goal is to help businesses thrive in the digital age.
+                    </p>
+                </details>
 
+                <details onclick="toggleCollapse('faq2')">
+                    <summary>How can Derex Finesse help my business go digital?</summary>
+                    <p class="text" id="faq2">
+                        We provide digitalization solutions tailored to your specific needs. Whether it's automating
+                        processes, expanding your online presence, or adopting new technologies, we've got you covered.
+                    </p>
+                </details>
 
-        <ol class="faq-box">
+                <details onclick="toggleCollapse('faq3')">
+                    <summary>What is the benefit of data analytics for my business?</summary>
+                    <p class="text" id="faq3">
+                        Data analytics can provide valuable insights into customer behavior, market trends, and
+                        operational performance. This information empowers data-driven decision-making and can enhance
+                        your strategies.
+                    </p>
+                </details>
 
-            <li>
-                <p>What is the best ?</p>
-                <span>&rArr;</span>
-            </li>
+                <details onclick="toggleCollapse('faq4')">
+                    <summary>How does Derex Finesse ensure data security and privacy?</summary>
+                    <p id="faq4" class="text">
+                        We take data security seriously. We employ advanced encryption, multi-factor authentication, and
+                        strict access controls to protect your data. We're fully compliant with data privacy
+                        regulations.
+                    </p>
+                </details>
+                <details onclick="toggleCollapse('faq5')">
+                    <summary>How can I get started with Derex Finesse services?</summary>
+                    <p id="faq5" class="text">
+                        Simply reach out to our team <a href="/templates/contactTeam-form.html">here</a> or contact us
+                        through our the live chat. We'll be happy to discuss your needs and tailor a solution for your
+                        business.
+                    </p>
+                </details>
+                <details onclick="toggleCollapse('faq6')">
+                    <summary>Can Derex Finesse help my business expand globally?</summary>
+                    <p id="faq6" class="text">
+                        Absolutely! We have expertise in global expansion, helping you enter new markets and reach a
+                        wider audience. Our <a href="/templates/sevices/globalization.html">globalization services</a>
+                        are designed to support your growth and help you scale in the global market.
+                    </p>
+                </details>
+                <details onclick="toggleCollapse('faq7')">
+                    <summary>What makes Derex Finesse different from other consulting firms?</summary>
+                    <p id="faq7" class="text">
+                        We offer a comprehensive suite of services, customized solutions, and a client-centric approach.
+                        Our team brings expertise and experience to the table, and we prioritize innovation and
+                        sustainability.
+                    </p>
+                </details>
+                <details onclick="toggleCollapse('faq8')">
+                    <summary>Does Derex Finesse offer ongoing support and guidance?</summary>
+                    <p id="faq8" class="text">
 
-            <li>
-                <p>How can i get paid from derex ?</p>
-                <span>&rArr;</span>
-            </li>
-
-            <li>
-                <p>Is this business great for investment ?</p>
-                <span>&rArr;</span>
-            </li>
-
-            <li>
-                <p>What is the price tag ?</p>
-                <span>&rArr;</span>
-            </li>
-
+                        Our <a href="/templates/sevices/consultant.html">consultation</a> services at Derex Finesse are
+                        meticulously crafted to propel our clients toward sustained growth and efficiency. Your success
+                        is our unwavering commitment, and our continual support ensures you're consistently on the path
+                        to triumph. Trust us to deliver personalized assistance tailored to your unique needs, guiding
+                        you every step of the way. With Derex Finesse, your triumph is not just a goal; it's our
+                        dedicated pursuit.
+                    </p>
+                </details>
+                <details onclick="toggleCollapse('faq9')">
+                    <summary>How does Derex Finesse stay updated on the latest industry trends and technologies?
+                    </summary>
+                    <p id="faq9" class="text">
+                        Derex Finesse prioritizes continuous learning and invests in research to stay at the forefront
+                        of industry advancements. We regularly participate in conferences, training, and collaborate
+                        with tech leaders to bring cutting-edge solutions to our clients.
+                    </p>
+                </details>
+                <details onclick="toggleCollapse('faq00')">
+                    <summary>Can Derex Finesse assist in employee training for digital adoption?</summary>
+                    <p id="faq00" class="text">
+                        Absolutely! We offer comprehensive training programs to ensure a smooth transition to new
+                        digital tools. Our expert trainers guide your team on best practices and efficient utilization
+                        of technologies, empowering them for better performance in your company.
+                    </p>
+                </details>
+                <details onclick="toggleCollapse('faq10')">
+                    <summary>What kind of businesses does Derex Finesse work with?</summary>
+                    <p id="faq10" class="text">
+                        Derex Finesse caters to businesses of all sizes and industries. Our customized solutions are
+                        designed to meet the unique needs and goals of each client, fostering growth and success across
+                        various sectors.
+                    </p>
+                </details>
+                <details onclick="toggleCollapse('faq11')">
+                    <summary>How does Derex Finesse support businesses in terms of sustainability?</summary>
+                    <p id="faq11" class="text">
+                        Sustainability is a core value at Derex Finesse. We assist businesses in adopting eco-friendly
+                        practices, reducing their carbon footprint, and integrating energy-efficient technologies to
+                        contribute to a more sustainable and responsible future.
+                    </p>
+                </details>
+                <details onclick="toggleCollapse('faq12')">
+                    <summary>Can Derex Finesse provide case studies or success stories from previous clients?</summary>
+                    <p id="faq12" class="text">
+                        Certainly! We have a portfolio of successful projects and client testimonials that showcase our
+                        expertise and the positive impact our solutions have had on businesses. Reach out to us, and
+                        we'd be happy to share relevant case studies.
+                    </p>
+                </details>
+                <details onclick="toggleCollapse('faq5')">
+                    <summary>Is there flexibility in the services Derex Finesse offers to accommodate changing business
+                        needs?</summary>
+                    <p id="faq5" class="text">
+                        Yes, flexibility is a key aspect of our approach. We understand that business needs evolve, and
+                        we adapt our services to meet those changes. Our goal is to be a dynamic and responsive partner
+                        in your business journey.
+                    </p>
+                </details>
+            </div>
         </ol>
 
 
     </main>
 
+
+    <!-- javascript CDN links -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- main JS -->
+
+    <script src="/assets/js/support.js"></script>
 
 </body>
 
